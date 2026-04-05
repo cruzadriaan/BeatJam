@@ -6,7 +6,7 @@ import { Menu } from './pages/Menu';
 import { Gallery } from './pages/Gallery';
 import { ContactUs } from './pages/ContactUs';
 import { Order } from './pages/Order';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 
 function App() {
 
