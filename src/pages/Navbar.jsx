@@ -6,7 +6,7 @@ import BeatJamLogo from '../images/beatjam-logo.png';
 export const Navbar = () => {
 
     return (
-        <div className='flex justify-between mx-5 my-0'>
+        <div className='flex flex-wrap justify-between mx-5 my-0'>
             <div className="p-1">
                 <Link to="/"><img src={BeatJamLogo} width="140" /></Link>
 
