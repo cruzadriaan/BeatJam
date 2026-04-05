@@ -12,15 +12,15 @@ export const Navbar = () => {
 
             </div>
 
-            <div className="flex justify-right mr-1.9 items-center p-0.6  gap-8 font-semibold text-xl text-gray-800 hover:text-gray-500">
-                <Link to="/">Home</Link>
-                <Link to="/menu">Menu</Link>
-                <Link to="/gallery">Gallery</Link>
-                <Link to="/contact">Contacts</Link>
+            <div className="flex justify-right mr-1.9 items-center p-0.6  gap-8 font-semibold text-xl text-gray-800">
+                <Link to="/" className='pb-0.2 border-b-2 border-transparent transition-all hover:border-[#E59A18]'>Home</Link>
+                <Link to="/menu" className='pb-0.2 border-b-2 border-transparent transition-all hover:border-[#E59A18]'>Menu</Link>
+                <Link to="/gallery" className='pb-0.2 border-b-2 border-transparent transition-all hover:border-[#E59A18]'>Gallery</Link>
+                <Link to="/contact" className='pb-0.2 border-b-2 border-transparent transition-all hover:border-[#E59A18]'>Contacts</Link>
 
-                <div className="register-container">
-                    <Link to="/signin" className='signin'>Sign In</Link>
-                    <Link to="/signup" className='signup'>Sign Up</Link>
+                <div className="flex flex-row gap-4 text-white">
+                    <Link to="/signin" className='bg-yellow-500 py-1 px-4 rounded-xl'>Sign In</Link>
+                    <Link to="/signup" className='bg-yellow-500 py-1 px-4 rounded-xl'>Sign Up</Link>
                 </div>
 
             </div>
