@@ -24,8 +24,8 @@ p{
 }
 
 .image-slider-container{
-    width: 600px;
-    height: 600px;
+    width: 37.5rem;
+    height: 37.5rem;
     overflow: hidden;
     position: relative;
     margin: auto;
@@ -34,13 +34,13 @@ p{
 
 .image-slider{
     display: flex;
-    width: 1200px;
+    width: 150rem;
     animation: slide 20s infinite;
 }
 
 .my-slide img{
-    width: 600px;
-    height: 600px;
+    width: 37.5rem;
+    height: 37.5rem;
     object-fit: cover;
 }
 
@@ -124,8 +124,3 @@ button:hover {
     }
 }
 
-@media (max-width: 1260px){
-    .home-image-container {
-        background-color: red;
-    }
-}

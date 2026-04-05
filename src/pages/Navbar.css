@@ -1,38 +1,4 @@
-.container{
-    display: flex;
-    justify-content: space-between;
-    margin: 0px 5px;
-    
-}
 
-.container i{
-    cursor: pointer;
-}
-
-.logo-container{
-    padding: 8px;
-}
-
-.nav-links{
-    display: flex;
-    justify-content: right;
-    margin-right: 30px;
-    align-items: center;
-    padding: 10px;
-    gap: 40px;
-    font-size: 19px;
-}
-
-.nav-links a{
-    font-weight: bold;
-    color: rgb(45, 45, 44);
-    text-decoration: none;
-    transition: transform 0.5s ease;
-}
-
-.nav-links a:hover{
-    transform: scale(1.2);
-}   
 
 .signin, .signup{
     background-color: orange;
