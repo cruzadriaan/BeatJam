@@ -21,7 +21,6 @@ p{
     background-color: rgb(230, 230, 230);
     height: 700px;
     border: none;
-
 }
 
 .image-slider-container{
@@ -122,5 +121,11 @@ button:hover {
 
     50% {
         transform: scale(1.1);
+    }
+}
+
+@media (max-width: 1260px){
+    .home-image-container {
+        background-color: red;
     }
 }
