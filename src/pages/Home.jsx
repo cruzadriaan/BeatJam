@@ -14,7 +14,7 @@ export const Home = () => {
     }
 
     return (
-        <div className='h-63'>
+        <div className='h-63 max-[460px]:w-[500px]'>
             <div className="flex bg-gray-200 h-[40rem] b-none 
             max-[460px]:w-[600px] max-[460px]:h-[600px] max-[460px]:mt-5">
 
@@ -32,7 +32,7 @@ export const Home = () => {
             </div>
 
             <div className="p-[30px] h-[20rem] font-bold text-gray-800 
-            max-[460px]:flex max-[460px]:flex-col max-[460px]:items-center max-[460px]:w-[500px]
+            max-[460px]:flex max-[460px]:flex-col max-[460px]:items-center max-[460px]:w-[600px]
             max-[460px]:justify-center ">
 
                 <p>We are open from Monday to Saturday 8am-9pm.</p>
