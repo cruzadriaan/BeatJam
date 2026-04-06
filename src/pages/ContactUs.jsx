@@ -1,5 +1,10 @@
 import './ContactUs.css';
+import contactus from '../images/contacts.jpg'
 
 export const ContactUs = () => {
-    return <h1>Contact Us</h1>
+    return(
+        <div className='m-1 mt-10'>
+            <img src={contactus} alt="" />
+        </div>
+    );
 }
