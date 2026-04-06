@@ -33,13 +33,13 @@ export const Home = () => {
 
             <div className="p-[30px] h-[320px] font-bold text-gray-800 
             max-[148px]:flex max-[148px]:flex-col max-[148px]:items-center max-[148px]:w-[600px]
-            max-[148px]:justify-center max-[420px]:text-md max-[420px]:p-[30px] max-[420px]:h-[230px]">
+            max-[148px]:justify-center max-[420px]:text-md max-[420px]:p-[30px] max-[420px]:h-[225px]">
 
                 <p>We are open from Monday to Saturday 8am-9pm.</p>
-                <p>Enjoy the delicous foods with a good view.</p>
+                <p className='mt-2'>Enjoy the delicous foods with a good view.</p>
 
-                <button className='btn-animate mt-[20px] p-[15px] w-[200px] border-none bg-yellow-500 text-white font-bold text-lg 
-                max-[420px]:justify-center max-[420px]:h-[50px] max-[420px]:w-[160px] max-[420px]:p-[10px]'
+                <button className='btn-animate mt-[20px] p-[15px] w-[200px] border-none bg-yellow-500 text-white font-bold text-md 
+                max-[420px]:justify-center max-[420px]:h-[40px] max-[420px]:w-[110px] max-[420px]:p-[5px]'
                     onClick={handleClick}
                 >Order Now
                 </button>

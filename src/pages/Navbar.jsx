@@ -2,34 +2,45 @@ import { Home } from './Home';
 import './Navbar.css';
 import { Link } from 'react-router-dom';
 import BeatJamLogo from '../images/beatjam-logo.png';
+import { useState } from 'react';
 
 export const Navbar = () => {
 
+    const [isOpen, setIsOpen] = useState(false);
+
     return (
-        <div className='flex flex-wrap justify-center mx-5 my-0 
-        max-[420px]:pt-2 max-[420px]:w-dvw max-[420px]:mx-0'>
+        <div className='flex flex-row justify-between items-center mx-5 my-0 
+        max-[420px]:pt-2 max-[420px]:mx-3'>
 
             <div className="p-1">
-                <Link to="/"><img src={BeatJamLogo} width="140" 
-                className='max-[420px]:w-[100px] max-[420px]:mb-4'/></Link>
-
+                <Link to="/"><img src={BeatJamLogo} width="140"
+                    className='max-[420px]:w-[100px] ' /></Link>
             </div>
 
-            <div className="flex justify-center mr-1.9 items-center p-0.6 gap-8 font-semibold text-md text-gray-800 
-              max-[420px]:gap-10 " >
-                <Link to="/" className='pb-0.2 border-b-2 border-transparent transition-all hover:border-[#E59A18]'>Home</Link>
-                <Link to="/menu" className='pb-0.2 border-b-2 border-transparent transition-all hover:border-[#E59A18]'>Menu</Link>
-                <Link to="/gallery" className='pb-0.2 border-b-2 border-transparent transition-all hover:border-[#E59A18]'>Gallery</Link>
-                <Link to="/contact" className='pb-0.2 border-b-2 border-transparent transition-all hover:border-[#E59A18]'>Contacts</Link>
 
-                {/* <div className="flex flex-row gap-4 text-white">
-                    <Link to="/signin" className='bg-yellow-500 py-1 px-4 rounded-xl '>Sign In</Link>
-                    <Link to="/signup" className='bg-yellow-500 py-1 px-4 rounded-xl '>Sign Up</Link>
-                </div> */}
+            <button className=" flex flex-col space-y-1" onClick={() => setIsOpen(!isOpen)}>
+                {!isOpen ?
+                    <>
+                        <span className='block  w-6 h-0.5 bg-gray-600'></span>
+                        <span className='block  w-6 h-0.5 bg-gray-600'></span>
+                        <span className='block  w-6 h-0.5 bg-gray-600'></span>
 
+                    </>
+                :
+                <div className='flex flex-col justify-center items-center'>
+                    <span className='block w-6 h-0.5 bg-gray-600 rotate-45 translate-y-0.5'></span>
+                    <span className='block w-6 h-0.5 bg-gray-600 -rotate-45'></span>
+                </div>
+            }
+
+            </button>
+
+            <div className={`${isOpen ? "block" : "hidden"} flex flex-col fixed top-[70px] right-0 z-50 shadow-xxl px-[40px] h-dvh gap-10`}>
+                <Link to="/" className='pb-0.2 border-b-2 border-transparent transition-all hover:border-[#E59A18]' onClick={() => setIsOpen(false)}>Home</Link>
+                <Link to="/menu" className='pb-0.2 border-b-2 border-transparent transition-all hover:border-[#E59A18]' onClick={() => setIsOpen(false)}>Menu</Link>
+                <Link to="/gallery" className='pb-0.2 border-b-2 border-transparent transition-all hover:border-[#E59A18]' onClick={() => setIsOpen(false)}>Gallery</Link>
+                <Link to="/contact" className='pb-0.2 border-b-2 border-transparent transition-all hover:border-[#E59A18]' onClick={() => setIsOpen(false)}>Contacts</Link>
             </div>
-
-        </div>
-
+        </div >
     );
 }
