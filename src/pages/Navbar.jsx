@@ -10,36 +10,38 @@ export const Navbar = () => {
 
     return (
         <div className='flex flex-row justify-between items-center mx-5 my-0 
-        max-[420px]:pt-2 max-[420px]:mx-3'>
+        max-[420px]:pt-1 max-[420px]:mx-3'>
 
             <div className="p-1">
                 <Link to="/"><img src={BeatJamLogo} width="140"
                     className='max-[420px]:w-[100px] ' /></Link>
             </div>
 
+            <div>
+                <button className=" flex flex-col space-y-1" onClick={() => setIsOpen(!isOpen)}>
+                    {!isOpen ?
+                        <>
+                            <span className='block  w-6 h-0.5 bg-gray-600'></span>
+                            <span className='block  w-6 h-0.5 bg-gray-600'></span>
+                            <span className='block  w-6 h-0.5 bg-gray-600'></span>
 
-            <button className=" flex flex-col space-y-1" onClick={() => setIsOpen(!isOpen)}>
-                {!isOpen ?
-                    <>
-                        <span className='block  w-6 h-0.5 bg-gray-600'></span>
-                        <span className='block  w-6 h-0.5 bg-gray-600'></span>
-                        <span className='block  w-6 h-0.5 bg-gray-600'></span>
+                        </>
+                        :
+                        <div className='flex flex-col justify-center items-center'>
+                            <span className='block w-6 h-0.5 bg-gray-600 rotate-45 translate-y-0.5'></span>
+                            <span className='block w-6 h-0.5 bg-gray-600 -rotate-45'></span>
+                        </div>
+                    }
 
-                    </>
-                :
-                <div className='flex flex-col justify-center items-center'>
-                    <span className='block w-6 h-0.5 bg-gray-600 rotate-45 translate-y-0.5'></span>
-                    <span className='block w-6 h-0.5 bg-gray-600 -rotate-45'></span>
+                </button>
+                
+                <div className={`${isOpen ? "block" : "hidden"} flex flex-col fixed top-[60px] right-0 z-50 shadow-xl px-[40px] h-dvh gap-10`}>
+                    <Link to="/" className='pb-0.2 font-bold border-b-2 border-transparent transition-all hover:border-[#E59A18]' onClick={() => setIsOpen(false)}>Home</Link>
+                    <Link to="/menu" className='pb-0.2 font-bold border-b-2 border-transparent transition-all hover:border-[#E59A18]' onClick={() => setIsOpen(false)}>Menu</Link>
+                    <Link to="/gallery" className='pb-0.2 font-bold border-b-2 border-transparent transition-all hover:border-[#E59A18]' onClick={() => setIsOpen(false)}>Gallery</Link>
+                    <Link to="/contact" className='pb-0.2 font-bold border-b-2 border-transparent transition-all hover:border-[#E59A18]' onClick={() => setIsOpen(false)}>Contacts</Link>
                 </div>
-            }
 
-            </button>
-
-            <div className={`${isOpen ? "block" : "hidden"} flex flex-col fixed top-[70px] right-0 z-50 shadow-xxl px-[40px] h-dvh gap-10`}>
-                <Link to="/" className='pb-0.2 border-b-2 border-transparent transition-all hover:border-[#E59A18]' onClick={() => setIsOpen(false)}>Home</Link>
-                <Link to="/menu" className='pb-0.2 border-b-2 border-transparent transition-all hover:border-[#E59A18]' onClick={() => setIsOpen(false)}>Menu</Link>
-                <Link to="/gallery" className='pb-0.2 border-b-2 border-transparent transition-all hover:border-[#E59A18]' onClick={() => setIsOpen(false)}>Gallery</Link>
-                <Link to="/contact" className='pb-0.2 border-b-2 border-transparent transition-all hover:border-[#E59A18]' onClick={() => setIsOpen(false)}>Contacts</Link>
             </div>
         </div >
     );

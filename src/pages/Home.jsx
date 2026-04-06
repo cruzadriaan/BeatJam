@@ -16,7 +16,7 @@ export const Home = () => {
     return (
         <div className='h-full w-dwh'>
             <div className="flex bg-gray-200 h-[40rem] b-none 
-             max-[420px]:mt-5 max-[420px]:h-[350px]">
+             max-[420px]:mt-1 max-[420px]:h-[350px]">
 
                 <div className="w-[37.5rem] h-[37.5rem] overflow-hidden p-relative m-auto rounded-lg 
                 max-[420px]:w-[300px] max-[420px]:h-[300px]">
