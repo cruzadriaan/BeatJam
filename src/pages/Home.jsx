@@ -16,10 +16,10 @@ export const Home = () => {
     return (
         <div className='h-full w-dwh'>
             <div className="flex bg-gray-200 h-[40rem] b-none 
-             max-[375px]:mt-5 max-[375px]:h-[350px]">
+             max-[420px]:mt-5 max-[420px]:h-[350px]">
 
                 <div className="w-[37.5rem] h-[37.5rem] overflow-hidden p-relative m-auto rounded-lg 
-                max-[375px]:w-[300px] max-[375px]:h-[300px]">
+                max-[420px]:w-[300px] max-[420px]:h-[300px]">
 
                     <div className="image-animate flex w-[1200px]">
                         <div className="image-slide"><img src={WaffleKing} alt="" /></div>
@@ -33,32 +33,32 @@ export const Home = () => {
 
             <div className="p-[30px] h-[320px] font-bold text-gray-800 
             max-[148px]:flex max-[148px]:flex-col max-[148px]:items-center max-[148px]:w-[600px]
-            max-[148px]:justify-center max-[375px]:text-md max-[375px]:p-[30px] max-[375px]:h-[230px]">
+            max-[148px]:justify-center max-[420px]:text-md max-[420px]:p-[30px] max-[420px]:h-[230px]">
 
                 <p>We are open from Monday to Saturday 8am-9pm.</p>
                 <p>Enjoy the delicous foods with a good view.</p>
 
                 <button className='btn-animate mt-[20px] p-[15px] w-[200px] border-none bg-yellow-500 text-white font-bold text-lg 
-                max-[375px]:justify-center max-[375px]:h-[50px] max-[375px]:w-[160px] max-[375px]:p-[10px]'
+                max-[420px]:justify-center max-[420px]:h-[50px] max-[420px]:w-[160px] max-[420px]:p-[10px]'
                     onClick={handleClick}
                 >Order Now
                 </button>
             </div>
 
             <div className="grid grid-cols-2 gap-[40px] h-[250px] p-[50px] bg-yellow-500
-            max-[375px]:justify-center max-[375px]:h-[250px] max-[375px]:w-dvw 
-            max-[375px]:flex max-[375px]:flex-col max-[375px]:text-sm max-[375px]:p-2 max-[375px]:gap-[10px]
-            max-[375px]:items-center">
+            max-[420px]:justify-center max-[420px]:h-[250px] max-[420px]:w-dvw 
+            max-[420px]:flex max-[420px]:flex-col max-[420px]:text-sm max-[420px]:p-2 max-[420px]:gap-[10px]
+            max-[420px]:items-center">
 
                 <div className="p-[30px] text-md w-[500px] text-center ml-[50px] bg-transparent text-white
-                max-[375px]:w-[400px] max-[375px]:ml-0 max-[375px]:text-[12px] max-[375px]:pb-[0px]">
+                max-[420px]:w-[400px] max-[420px]:ml-0 max-[420px]:text-[12px] max-[420px]:pb-[0px]">
                     <p>Established in 2019, Beatjam is San Francisco, Quezon’s premier destination for chill vibes
                         and great music. Whether you're craving authentic Ramen, sizzling specialties, or a refreshing
                         milk tea, we offer a diverse menu paired with a relaxing ambiance that hits all the right notes</p>
                 </div>
 
                 <div className="flex flex-col gap-[5px] p-[10px] text-md bg-transparent text-white w-[500px] text-center ml-[50px]
-                max-[375px]:w-[200px] max-[375px]:ml-0 max-[375px]:mt-4 max-[375px]:p-5" >
+                max-[420px]:w-[200px] max-[420px]:ml-0 max-[420px]:mt-4 max-[420px]:p-5" >
                     <p style={{ fontWeight: "bold" }}>Aurora</p>
                     <p>0123-456-789</p>               
                 </div>
