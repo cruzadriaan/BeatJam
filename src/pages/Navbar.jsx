@@ -6,11 +6,12 @@ import BeatJamLogo from '../images/beatjam-logo.png';
 export const Navbar = () => {
 
     return (
-        <div className='flex flex-wrap justify-between mx-5 my-0 
-        max-[420px]:pt-2 '>
+        <div className='flex flex-wrap justify-center mx-5 my-0 
+        max-[420px]:pt-2 max-[420px]:w-dvw max-[420px]:mx-0'>
+
             <div className="p-1">
                 <Link to="/"><img src={BeatJamLogo} width="140" 
-                className='max-[420px]:w-[90px] max-[420px]:mb-4'/></Link>
+                className='max-[420px]:w-[100px] max-[420px]:mb-4'/></Link>
 
             </div>
 
@@ -21,12 +22,13 @@ export const Navbar = () => {
                 <Link to="/gallery" className='pb-0.2 border-b-2 border-transparent transition-all hover:border-[#E59A18]'>Gallery</Link>
                 <Link to="/contact" className='pb-0.2 border-b-2 border-transparent transition-all hover:border-[#E59A18]'>Contacts</Link>
 
-                <div className="flex flex-row gap-4 text-white">
-                    <Link to="/signin" className='bg-yellow-500 py-1 px-4 rounded-xl max-[460px]:hidden'>Sign In</Link>
-                    <Link to="/signup" className='bg-yellow-500 py-1 px-4 rounded-xl max-[460px]:hidden'>Sign Up</Link>
-                </div>
+                {/* <div className="flex flex-row gap-4 text-white">
+                    <Link to="/signin" className='bg-yellow-500 py-1 px-4 rounded-xl '>Sign In</Link>
+                    <Link to="/signup" className='bg-yellow-500 py-1 px-4 rounded-xl '>Sign Up</Link>
+                </div> */}
 
             </div>
+
         </div>
 
     );

@@ -59,8 +59,8 @@ export const Home = () => {
 
                 <div className="flex flex-col gap-[5px] p-[10px] text-md bg-transparent text-white w-[500px] text-center ml-[50px]
                 max-[420px]:w-[200px] max-[420px]:ml-0 max-[420px]:mt-4 max-[420px]:p-5" >
-                    <p style={{ fontWeight: "bold" }}>Aurora</p>
-                    <p>0123-456-789</p>               
+                    <p style={{ fontWeight: "bold" }}>Beat Jam Aurora</p>
+                    <p>0999-954-8120</p>               
                 </div>
 
             </div>
