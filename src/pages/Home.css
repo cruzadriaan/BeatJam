@@ -1,6 +1,6 @@
-:root{
-  --font-color: rgb(45, 45, 44);  
-  --secondary-font-color: #fff;
+:root {
+    --font-color: rgb(45, 45, 44);
+    --secondary-font-color: #fff;
 }
 
 * {
@@ -8,30 +8,62 @@
     padding: 0;
 }
 
-p{
+p {
     margin: 0;
 }
 
-.image-animate{
+.image-animate {
     animation: slide 20s infinite;
 }
 
-.image-slide img{
+.image-slide img {
     width: 300px;
     height: 300px;
     object-fit: cover;
 }
 
-@keyframes slide{
-      0%   { transform: translateX(0); }
-      20%  { transform: translateX(0); }
-      25%  { transform: translateX(-300px); }
-      45%  { transform: translateX(-300px); }
-      50%  { transform: translateX(-600px); }
-      70%  { transform: translateX(-600px); }
-      75%  { transform: translateX(-900px); }
-      95%  { transform: translateX(-900px); }
-      100% { transform: translateX(0); }
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+
+    15% {
+        transform: translateX(0);
+    }
+
+    20% {
+        transform: translateX(-300px);
+    }
+
+    35% {
+        transform: translateX(-300px);
+    }
+
+    40% {
+        transform: translateX(-600px);
+    }
+
+    55% {
+        transform: translateX(-600px);
+    }
+
+    60% {
+        transform: translateX(-900px);
+    }
+
+    75% {
+        transform: translateX(-900px);
+    }
+
+    80% {
+        transform: translateX(-1200px);
+    }
+
+    95% {
+        transform: translateX(-1200px);
+    }
+
+
 }
 
 
@@ -52,4 +84,3 @@ p{
         transform: scale(1.1);
     }
 }
-

@@ -1,9 +1,10 @@
 import { useNavigate } from 'react-router-dom';
 import './Home.css';
-import WaffleKing from '../images/menu/waffle-king.jpg'
-import Waffle from '../images/menu/waffle.png'
-import BiscoffCake from '../images/menu/biscoff-cake.jpg'
-import Milktea from '../images/menu/milktea.jpg'
+import WaffleKing from '../images/menu/waffle-king.jpg';
+import Waffle from '../images/menu/waffle.png';
+import BiscoffCake from '../images/menu/biscoff-cake.jpg';
+import Milktea from '../images/menu/milktea.jpg';
+import Mixed from '../images/menu/mixed.png';
 
 export const Home = () => {
 
@@ -21,11 +22,12 @@ export const Home = () => {
                 <div className="w-[37.5rem] h-[37.5rem] overflow-hidden p-relative m-auto rounded-lg 
                 max-[420px]:w-[300px] max-[420px]:h-[300px]">
 
-                    <div className="image-animate flex w-[1200px]">
+                    <div className="image-animate flex w-[1500px]">
                         <div className="image-slide"><img src={WaffleKing} alt="" /></div>
                         <div className="image-slide"><img src={Waffle} alt="" /></div>
                         <div className="image-slide"><img src={BiscoffCake} alt="" /></div>
                         <div className="image-slide"><img src={Milktea} alt="" /></div>
+                        <div className="image-slide"><img src={Mixed} alt="" /></div>
                     </div>
                 </div>
 
