@@ -15,14 +15,14 @@ export const Home = () => {
     }
 
     return (
-        <div className='h-full w-dwh'>
-            <div className="flex bg-gray-200 h-[40rem] b-none 
-             max-[420px]:mt-1 max-[420px]:h-[350px]">
+        <div className='h-full w-dvw'>
+            <div className="flex bg-gray-200 h-[350px] b-none 
+              sm:mt-1  sm:h-[700px]">
 
-                <div className="w-[37.5rem] h-[37.5rem] overflow-hidden p-relative m-auto rounded-lg 
-                max-[420px]:w-[300px] max-[420px]:h-[300px]">
+                <div className="w-[--image-slide] h-[--image-slide] overflow-hidden p-relative m-auto rounded-lg 
+                sm:w-[--image-slide] sm:h-[--image-slide]">
 
-                    <div className="image-animate flex w-[1500px]">
+                    <div className="image-animate flex w-[1500px] sm:w-[3000px]">
                         <div className="image-slide"><img src={WaffleKing} alt="" /></div>
                         <div className="image-slide"><img src={Waffle} alt="" /></div>
                         <div className="image-slide"><img src={BiscoffCake} alt="" /></div>
@@ -33,9 +33,8 @@ export const Home = () => {
 
             </div>
 
-            <div className="p-[30px] h-[320px] font-bold text-gray-800 
-            max-[148px]:flex max-[148px]:flex-col max-[148px]:items-center max-[148px]:w-[600px]
-            max-[148px]:justify-center max-[420px]:text-md max-[420px]:p-[30px] max-[420px]:h-[225px]">
+            <div className="flex  flex-col p-[30px] h-[250px] font-bold text-gray-800 
+            items-center w-[dvw] justify-center sm:text-md sm:p-[30px] sm:h-[225px]">
 
                 <p>We are open from Monday to Saturday <br/>8am-9pm.</p>
                 <p className='mt-2'>Enjoy the delicous foods with a good view.</p>
@@ -47,24 +46,25 @@ export const Home = () => {
                 </button>
             </div>
 
-            <div className="grid grid-cols-2 gap-[40px] h-[250px] p-[50px] bg-yellow-500
-            max-[420px]:justify-center max-[420px]:h-[250px] max-[420px]:w-dvw 
-            max-[420px]:flex max-[420px]:flex-col max-[420px]:text-sm max-[420px]:p-2 max-[420px]:gap-[10px]
-            max-[420px]:items-center">
+            <div className="grid grid-rows-2 gap-[100px] h-[290px] p-[50px] bg-yellow-500">
 
-                <div className="p-[30px] text-md w-[500px] text-center ml-[50px] bg-transparent text-white
-                max-[420px]:w-[400px] max-[420px]:ml-0 max-[420px]:text-[12px] max-[420px]:pb-[0px]">
+                <div className="bg-transparent text-white">
                     <p>Established in 2019, Beatjam is San Francisco, Quezon’s premier destination for chill vibes
                         and great music. Whether you're craving authentic Ramen, sizzling specialties, or a refreshing
                         milk tea, we offer a diverse menu paired with a relaxing ambiance that hits all the right notes</p>
                 </div>
 
-                <div className="flex flex-col gap-[5px] p-[10px] text-md bg-transparent text-white w-[500px] text-center ml-[50px]
-                max-[420px]:w-[200px] max-[420px]:ml-0 max-[420px]:mt-4 max-[420px]:p-5" >
+                <div className="bg-transparent text-white" >
                     <p style={{ fontWeight: "bold" }}>Beat Jam Aurora</p>
                     <p>0999-954-8120</p>               
                 </div>
 
+            </div>
+
+            <div className='bg-blue-700 h-10 flex flex-col justify-center px-[100px] items-center text-white text-[12px]'>
+                    <div className='bg-transparent'>
+                        <p>All rights reserved 2026   |   Follow us on social media</p>
+                    </div>
             </div>
 
         </div>

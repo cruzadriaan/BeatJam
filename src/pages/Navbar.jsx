@@ -18,7 +18,7 @@ export const Navbar = () => {
             </div>
 
             <div>
-                <button className=" flex flex-col space-y-1" onClick={() => setIsOpen(!isOpen)}>
+                <button className="sm:hidden flex flex-col space-y-1" onClick={() => setIsOpen(!isOpen)}>
                     {!isOpen ?
                         <>
                             <span className='block  w-6 h-0.5 bg-gray-600'></span>
@@ -27,7 +27,7 @@ export const Navbar = () => {
 
                         </>
                         :
-                        <div className='flex flex-col justify-center items-center'>
+                        <div className='flex flex-col justify-center items-center sm:hidden'>
                             <span className='block w-6 h-0.5 bg-gray-600 rotate-45 translate-y-0.5'></span>
                             <span className='block w-6 h-0.5 bg-gray-600 -rotate-45'></span>
                         </div>
@@ -35,7 +35,10 @@ export const Navbar = () => {
 
                 </button>
                 
-                <div className={`${isOpen ? "block" : "hidden"} flex flex-col fixed top-[60px] right-0 z-50 shadow-xl px-[40px] h-dvh gap-10`}>
+                <div className={`${isOpen ? "flex" : "hidden"} 
+                flex flex-col items-center fixed top-[60px] right-0 z-50 shadow-xl px-[40px] h-dvh gap-10
+                sm:flex-row sm:relative sm:flex sm:top-0 sm:h-0`}>
+                    
                     <Link to="/" className='pb-0.2 font-bold border-b-2 border-transparent transition-all hover:border-[#E59A18]' onClick={() => setIsOpen(false)}>Home</Link>
                     <Link to="/menu" className='pb-0.2 font-bold border-b-2 border-transparent transition-all hover:border-[#E59A18]' onClick={() => setIsOpen(false)}>Menu</Link>
                     <Link to="/gallery" className='pb-0.2 font-bold border-b-2 border-transparent transition-all hover:border-[#E59A18]' onClick={() => setIsOpen(false)}>Gallery</Link>
