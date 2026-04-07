@@ -36,7 +36,7 @@ export const Navbar = () => {
                 </button>
                 
                 <div className={`${isOpen ? "flex" : "hidden"} 
-                flex flex-col items-center fixed top-[60px] right-0 z-50 shadow-xl px-[40px] h-dvh gap-10
+                text-gray-800 flex flex-col items-center fixed top-[55px] right-0 z-50 shadow-xl px-[40px] h-dvh gap-10
                 sm:flex-row sm:relative sm:flex sm:top-0 sm:h-0`}>
                     
                     <Link to="/" className='pb-0.2 font-bold border-b-2 border-transparent transition-all hover:border-[#E59A18]' onClick={() => setIsOpen(false)}>Home</Link>
