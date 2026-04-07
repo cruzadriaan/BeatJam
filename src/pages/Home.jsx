@@ -46,24 +46,30 @@ export const Home = () => {
                 </button>
             </div>
 
-            <div className="grid grid-rows-2 gap-[100px] h-[290px] p-[50px] bg-yellow-500">
+            <div className="grid grid-rows-2 gap-[80px] h-[300px] p-[20px] pt-10 bg-yellow-500
+            md:p-20 md:gap-[130px]
+            ">
 
-                <div className="bg-transparent text-white">
+                <div className="bg-transparent text-white text-sm sm:text-lg">
                     <p>Established in 2019, Beatjam is San Francisco, Quezon’s premier destination for chill vibes
                         and great music. Whether you're craving authentic Ramen, sizzling specialties, or a refreshing
                         milk tea, we offer a diverse menu paired with a relaxing ambiance that hits all the right notes</p>
                 </div>
 
-                <div className="bg-transparent text-white" >
+                <div className="bg-transparent text-white text-sm sm:text-lg" >
                     <p style={{ fontWeight: "bold" }}>Beat Jam Aurora</p>
                     <p>0999-954-8120</p>               
                 </div>
 
             </div>
 
-            <div className='bg-blue-700 h-10 flex flex-col justify-center px-[100px] items-center text-white text-[12px]'>
+            <div className='bg-blue-700 h-10 flex flex-row justify-center gap-1 items-center text-white text-[10px]
+            md:text-lg md:justify-center sm:gap-2'>
                     <div className='bg-transparent'>
-                        <p>All rights reserved 2026   |   Follow us on social media</p>
+                        <p>All rights reserved 2026 |</p>
+                    </div>
+                    <div className='bg-transparent'>
+                        <p>Follow us on social media </p>
                     </div>
             </div>
 
