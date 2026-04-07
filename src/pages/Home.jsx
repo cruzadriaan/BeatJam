@@ -63,7 +63,7 @@ export const Home = () => {
 
             </div>
 
-            <div className='bg-blue-700 h-10 flex flex-row justify-center gap-1 items-center text-white text-[11px]
+            <div className='bg-yellow-700 h-10 flex flex-row justify-center gap-1 items-center text-white text-[11px]
             md:text-lg md:justify-center sm:gap-2'>
                     <div className='bg-transparent'>
                         <p>All rights reserved 2026 |</p>
