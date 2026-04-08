@@ -40,11 +40,11 @@ export const Home = () => {
                     </div>
                 </div>
 
-                <div className=' absolute flex bottom-0 items-center w-full gap-3  justify-center sm:h-10 h-6 
+                <div className=' absolute flex bottom-0 items-center w-full sm:gap-4 gap-3  justify-center sm:h-10 h-6 
                  bg-transparent'>
                     {slides.map((_, i) => {
                         return (
-                            <span key={i} className={`block sm:w-3 w-2 sm:h-3 h-2  duration-100 transition-colors rounded-full ${activeIndex === i ? "bg-yellow-600" : "bg-gray-400" }`} ></span>
+                            <span key={i} className={`block sm:w-2 w-2 sm:h-2 h-2  duration-100 transition-colors rounded-full ${activeIndex === i ? "bg-yellow-600" : "bg-gray-400" }`} ></span>
                         );
                     })}
                 </div>
@@ -56,8 +56,8 @@ export const Home = () => {
                 <p>We are open from Monday to Saturday <br />8am-9pm.</p>
                 <p className='mt-2'>Enjoy the delicous foods with a good view.</p>
 
-                <button className='btn-animate mt-[20px] p-[15px] w-[150px] h-[40px] border-none bg-yellow-500 text-white font-bold text-md 
-                sm:justify-center sm:h-[40px] sm:w-[110px] sm:p-[5px]'
+                <button className='btn-animate mt-[20px] p-[10px] sm:w-[150px] w-[120px] sm:h-[45px] h-[40px] border-none bg-yellow-500 text-white font-bold text-md 
+                sm:justify-center  sm:p-[5px]'
                     onClick={handleClick}
                 >Order Now
                 </button>
@@ -81,7 +81,7 @@ export const Home = () => {
 
             </div>
 
-            <div className='bg-yellow-700 h-10 flex flex-row justify-center gap-1 items-center text-white text-[11px]
+            <div className='bg-yellow-600 h-10 flex flex-row justify-center gap-1 items-center text-white text-[11px]
             md:text-lg md:justify-center sm:gap-2'>
                 <div className='bg-transparent'>
                     <p>All rights reserved 2026 |</p>
