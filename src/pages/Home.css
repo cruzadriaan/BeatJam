@@ -13,20 +13,20 @@ p {
     margin: 0;
 }
 
-.image-animate {
-    animation: slide 20s infinite;
+@media (min-width: 640px){
+    :root{
+        --image-slide: 600px;
+    }
 }
 
 .image-slide img {
     @apply w-[300px] h-[300px] sm:h-[600px] sm:w-[600px];
     object-fit: cover;
 }
-
-@media (min-width: 640px){
-    :root{
-        --image-slide: 600px;
-    }
+.image-animate {
+    animation: slide 30s infinite;
 }
+
 
 @keyframes slide {
     0% {
@@ -68,25 +68,23 @@ p {
     95% {
         transform: translateX(calc(var(--image-slide) * -4));
     }
-
-
 }
 
 
 .btn-animate {
     transition: background-color 0.5s ease;
-    animation: scalce 2s ease-in-out infinite;
+    animation: scale 5s ease-in-out infinite;
     cursor: pointer;
 }
 
 
 
-@keyframes scalce {
+@keyframes scale {
     0% {
-        transform: scalce(1.0);
+        transform: scale(1.0);
     }
 
     50% {
-        transform: scalce(1.1);
+        transform: scale(1.1);
     }
 }
