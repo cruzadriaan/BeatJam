@@ -35,9 +35,9 @@ export const Navbar = () => {
 
                 </button>
                 
-                <div className={`${isOpen ? "flex" : "hidden"} 
+                <div className={`${isOpen ? "translate-x-0 opacity-100 " : "translate-x-full opacity-0 sm:flex sm:translate-x-5 sm:opacity-100"} 
                 text-gray-800 flex flex-col items-center fixed top-[55px] right-0 z-50 shadow-xl px-[40px] h-dvh gap-10
-                sm:flex-row sm:relative sm:flex sm:top-0 sm:h-0`}>
+                sm:flex-row sm:relative sm:flex sm:top-0 sm:h-0 transition-transform duration-500`}>
                     
                     <Link to="/" className='pb-0.2 font-bold border-b-2 border-transparent transition-all hover:border-[#E59A18]' onClick={() => setIsOpen(false)}>Home</Link>
                     <Link to="/menu" className='pb-0.2 font-bold border-b-2 border-transparent transition-all hover:border-[#E59A18]' onClick={() => setIsOpen(false)}>Menu</Link>
