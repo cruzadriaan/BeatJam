@@ -14,12 +14,12 @@ export const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
 
     return (
-        <div className='flex flex-row justify-between items-center mx-5 my-0 
-        max-[420px]:pt-1 max-[420px]:mx-3'>
+        <div className='flex flex-row justify-between items-center sm:mx-6 mx-6 my-0 sm:pt-3 md:p-3 p-2
+         '>
 
-            <div className="p-1">
-                <Link to="/"><img src={BeatJamLogo} width="140"
-                    className='max-[420px]:w-[100px] ' /></Link>
+            <div className="">
+                <Link to="/"><img src={BeatJamLogo}
+                    className='w-[120px] ' /></Link>
             </div>
 
             <div>
@@ -34,12 +34,17 @@ export const Navbar = () => {
                             </>
                         }
                     </button>
-
-
                 </div>
 
+                {isOpen && (
+                    <div
+                        className="fixed inset-0 bg-black bg-opacity-50 z-40"
+                        onClick={() => setIsOpen(false)}
+                    ></div>
+                )}
+
                 <div className={`${isOpen ? "translate-x-0  shadow-xl " : "translate-x-full sm:flex sm:translate-x-5 sm:opacity-100 "} 
-                text-gray-800 flex flex-col items-left fixed top-0 right-0 z-50 p-5 h-dvh gap-10
+                text-gray-800 flex flex-col items-left sm:items-center fixed top-0 right-0 z-50 h-dvh sm:gap-2
                 sm:flex-row sm:relative sm:flex sm:top-0 sm:h-0  transition-transform transition-opacity duration-500`}>
 
                     <div className='flex flex-col items-end'>
@@ -51,13 +56,15 @@ export const Navbar = () => {
                             }
                         </button>
                     </div>
+                    <div className='flex items-center justify-center md:gap-12 sm:gap-6 gap-10'>
+                        {Navlinks.map((nav, index) => (
+                            <div key={index} className='flex items-center justify-center gap-1'>
+                                <FontAwesomeIcon icon={nav.icon} className="text-gray-700 pb-1 h-5" />
+                                <Link to={nav.src} className='pb-0.2 font-bold border-b-2 border-transparent  hover:border-[#E59A18]' onClick={() => setIsOpen(false)}>{nav.name}</Link>
+                            </div>
+                        ))}
+                    </div>
 
-                    {Navlinks.map((nav, index) => (
-                        <div key={index} className='flex gap-3 w-[150px] p-1'>
-                            <FontAwesomeIcon icon={nav.icon} className="text-gray-700 h-5 " />
-                            <Link to={nav.src} className='pb-0.2 font-bold border-b-2 border-transparent  hover:border-[#E59A18]' onClick={() => setIsOpen(false)}>{nav.name}</Link>
-                        </div>
-                    ))}
 
 
 
