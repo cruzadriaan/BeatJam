@@ -43,11 +43,11 @@ export const Navbar = () => {
                     ></div>
                 )}
 
-                <div className={`${isOpen ? "translate-x-0  shadow-xl " : "translate-x-full sm:flex sm:translate-x-5 sm:opacity-100 "} 
-                text-gray-800 flex flex-col items-left sm:items-center fixed top-0 right-0 z-50 h-dvh sm:gap-2
-                sm:flex-row sm:relative sm:flex sm:top-0 sm:h-0  transition-transform transition-opacity duration-500`}>
+                <div className={`${isOpen ? "translate-x-0  shadow-xl" : "translate-x-full  sm:opacity-100 "} 
+                text-gray-800 flex flex-col items-left sm:items-center fixed top-0 right-0 z-50 h-dvh sm:gap-2  sm:translate-x-5
+                sm:flex-row sm:relative sm:flex sm:top-0 sm:h-0 transition-transform transition-opacity duration-500`}>
 
-                    <div className='flex flex-col items-end'>
+                    <div className='flex flex-col items-end p-2'>
                         <button className="sm:hidden" onClick={() => setIsOpen(!isOpen)}>
                             {isOpen &&
                                 <div className=' w-10 sm:hidden border rounded-full p-1 px-3 font-semibold hover:text-white text-lg border-black hover:bg-gray-800'>
@@ -56,7 +56,7 @@ export const Navbar = () => {
                             }
                         </button>
                     </div>
-                    <div className='flex items-center justify-center md:gap-12 sm:gap-6 gap-10'>
+                    <div className='flex sm:flex-row flex-col items-center sm:w-full w-[180px] p-5 justify-center md:gap-12 sm:gap-6 gap-10'>
                         {Navlinks.map((nav, index) => (
                             <div key={index} className='flex items-center justify-center gap-1'>
                                 <FontAwesomeIcon icon={nav.icon} className="text-gray-700 pb-1 h-5" />
@@ -69,7 +69,8 @@ export const Navbar = () => {
 
 
                     {isOpen &&
-                        <div className="flex flex-row gap-4 mt-auto justify-center mb-10" >
+                        <div className="flex flex-col text-[12px] gap-4 mt-auto justify-center mb-10" >
+                            <p>Follow us on social media:</p>
                             <a href='https://www.facebook.com/profile.php?id=61581443513987'>
                                 <FontAwesomeIcon className='h-5 text-gray-900 hover:scale-110' icon={faFacebook} />
                             </a>
