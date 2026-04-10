@@ -4,27 +4,27 @@ import Cat from '../images/copper.png';
 export const Order = () => {
     return (
         <>
-            <div className='flex flex-col gap-5 pt-[20px] m-10 border border-gray-300  rounded-xl h-[550px] sm:w-[700px] w-[500px] drop-shadow-sm items-center mx-auto'>
+            <div className='flex flex-col gap-5 p-[20px] m-10 border border-gray-300  rounded-xl h-fit max-w-[90%] w-fit drop-shadow-sm items-center mx-auto'>
 
                 <h1 className='font-bold text-3xl mb-5'>Order Form</h1>
 
-                <form className='flex flex-col gap-5 w-[400px]'>
+                <form className='flex flex-col gap-5 w-fit'>
                     <div className='flex items-left gap-5'>
                         <label className='text-sm text-left font-semibold text-gray-700'>
                             First Name:
-                            <input type="text" className='border border-gray-400 p-1   flex-1 rounded-md' required />
+                            <input type="text" className='border border-gray-400 p-1 w-full rounded-md' required />
                         </label>
 
                         <label className='text-sm text-left font-semibold text-gray-700'>
                             Last Name:
-                            <input type="text" className='border border-gray-400  p-1  flex-1 rounded-md' required />
+                            <input type="text" className='border border-gray-400  p-1 w-full rounded-md' required />
                         </label>
                     </div>
 
                     <div className='flex flex-row gap-10'>
                         <label className='text-sm text-left font-semibold  text-gray-700 '>
                             Email Address:
-                            <input type="email" placeholder="(optional)" className='border border-gray-400  p-1 ml-1 flex-1 rounded-md' />
+                            <input type="email" placeholder="(optional)" className='border border-gray-400  p-1 ml-1 w-full rounded-md' />
                         </label>
                     </div>
 
@@ -33,14 +33,14 @@ export const Order = () => {
                             <label className='flex items-left justify-left text-sm font-semibold text-gray-700 '>
                                 Delivery Address:
                             </label>
-                            <textarea type="text" className='border border-gray-400  p-1  flex-1 rounded-md' required />
+                            <textarea type="text" className='border border-gray-400  p-1 w-full  rounded-md' required />
                         </div>
 
                         <div className='flex flex-col '>
                             <label className='flex items-left justify-left text-sm font-semibold text-gray-700 '>
                                 Notes:
                             </label>
-                            <textarea type="text" className='border border-gray-400  p-1  flex-1 rounded-md' required />
+                            <textarea type="text" className='border border-gray-400  p-1 w-full rounded-md' required />
                         </div>
                     </div>
                     <div className='flex flex-row justify-center items-center gap-5'>
