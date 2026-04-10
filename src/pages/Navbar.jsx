@@ -46,7 +46,7 @@ export const Navbar = () => {
                         <button className="sm:hidden" onClick={() => setIsOpen(!isOpen)}>
                             {isOpen &&
                                 <div className='flex flex-col justify-center items-center sm:hidden border rounded-full p-1 px-3 font-semibold hover:text-white text-lg border-black hover:bg-gray-800'>
-                                        X
+                                    X
                                 </div>
                             }
                         </button>
@@ -54,17 +54,17 @@ export const Navbar = () => {
 
                     {Navlinks.map((nav, index) => (
                         <div key={index} className='flex gap-3 w-[150px] p-1'>
-                            {isOpen && <FontAwesomeIcon icon={nav.icon} className="text-gray-700 h-5 "  />}
+                            {isOpen && <FontAwesomeIcon icon={nav.icon} className="text-gray-700 h-5 " />}
                             <Link to={nav.src} className='pb-0.2 font-bold border-b-2 border-transparent transition-all hover:border-[#E59A18]' onClick={() => setIsOpen(false)}>{nav.name}</Link>
                         </div>
                     ))}
 
 
-                    
+
                     {isOpen &&
-                        <div className="flex flex-row gap-4 mt-auto justify-center mb-auto" >
+                        <div className="flex flex-row gap-4 mt-auto justify-center mb-10" >
                             <a href='https://www.facebook.com/profile.php?id=61581443513987'>
-                                <FontAwesomeIcon  className='h-5 text-gray-900 hover:scale-110' icon={faFacebook} />
+                                <FontAwesomeIcon className='h-5 text-gray-900 hover:scale-110' icon={faFacebook} />
                             </a>
                         </div>
                     }
