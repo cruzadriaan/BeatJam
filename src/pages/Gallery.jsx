@@ -24,7 +24,7 @@ export const Gallery = () => {
             {openImage &&
             (
             <div className='bg-black bg-opacity-85 fixed inset-0 flex flex-col justify-center item-center' onClick={()=> setOpenImage(null)}>
-                    <div className='bg-white p-4'>
+                    <div className='bg-white'>
                         <img src={openImage.image} alt="" />
                     </div>
             </div>

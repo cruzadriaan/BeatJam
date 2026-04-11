@@ -14,8 +14,8 @@ export const Order = () => {
     });
 
     const handleInput = (e) => {
-        const {name, value} = e.target;
-        setFormData({...formData, [name]: value });
+        const { name, value } = e.target;
+        setFormData({ ...formData, [name]: value });
     }
 
     const handleClear = () => {
@@ -29,9 +29,13 @@ export const Order = () => {
         })
     }
 
+    const handleSubmit = () => {
+        alert("Order muna bago submit unggoy!");
+    }
+
     return (
         <>
-            <div className='flex flex-col gap-5 p-[20px] m-10 border border-gray-300  rounded-xl h-fit max-w-[90%] w-fit drop-shadow-sm items-center mx-auto'>
+            <div className='flex flex-col gap-5 p-[20px] mt-5 border border-gray-300  rounded-xl h-fit max-w-[90%] w-fit drop-shadow-sm items-center mx-auto '>
 
                 <h1 className='font-bold text-3xl mb-5'>Order Form</h1>
 
@@ -79,15 +83,16 @@ export const Order = () => {
                         </div>
                     </div>
                     <div className='flex flex-row justify-center items-center gap-5'>
-                        <button className='p-3 border w-[140px]  rounded-lg bg-yellow-500 text-white font-bold'>Submit Order</button>
+                        <button className='p-3 border w-[140px]  rounded-lg bg-yellow-500 text-white font-bold' onClick={handleSubmit}>Submit Order</button>
                         <button className='p-3 border w-[140px] rounded-lg bg-red-500 text-white font-bold' onClick={handleClear}>Clear</button>
                     </div>
+                    <div className='flex flex-col justify-center items-center h-dv sm:mt-30 mt-[100px]'>
+                        <img className='w-[300px] ' src={Cat} alt="" />
+                        <h1>Order Page is currently in progress..</h1>
+                        <p className='font-bold mb-20'>- Adrian</p>
+                    </div>
                 </form>
-                <div className='flex flex-col justify-center items-center h-dv sm:mt-30 mt-[100px]'>
-                    <img className='w-[300px] ' src={Cat} alt="" />
-                    <h1>Order Page is currently in progress..</h1>
-                    <p className='font-bold mb-20'>- Adrian</p>
-                </div>
+
             </div>
         </>
 
