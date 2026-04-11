@@ -70,7 +70,7 @@ export const Home = () => {
             <div className='lg:pt-8 sm:pt-8 pt-7 xl:h-[420px] lg:h-[380px] md:h-[320px] sm:h-[280px] h-[240px] lg:space-y-12 md:space-y-7 sm:space-y-8 space-y-5 '>
                 <h1 className='font-bold'>Best Seller</h1>
 
-                <div className='grid grid-cols-3 h-full mx-3 bg-transparent ' >
+                <div className='grid grid-cols-3 h-full mx-1 bg-transparent ' >
 
                     <div className='bg-transparent flex flex-col items-center gap-2'>
                         <img src={Kinalas} alt="" className='bg-transparent lg:h-[220px] md:h-[150px] sm:h-[120px] h-[100px]' />
