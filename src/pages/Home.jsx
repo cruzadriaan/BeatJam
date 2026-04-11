@@ -53,28 +53,6 @@ export const Home = () => {
                 </div>
             </div>
 
-            <div className='lg:pt-8 sm:pt-8 pt-7 xl:h-[420px] lg:h-[380px] md:h-[320px] sm:h-[280px] h-[240px] lg:space-y-12 md:space-y-7 sm:space-y-8 space-y-5'>
-                <h1 className='font-bold'>Best Seller</h1>
-
-                <div className='grid grid-cols-3 h-full mx-3 bg-transparent ' >
-                    
-                    <div className='bg-transparent flex flex-col items-center gap-2'>
-                        <img src={Kinalas} alt="" className='bg-transparent lg:h-[220px] md:h-[150px] sm:h-[120px] h-[100px]'/>
-                        <p className='font-bold text-sm text-center'>Kinalas</p>
-                    </div>
-                    <div className='bg-transparent flex flex-col items-center gap-2'>
-                        <img src={Tocilog} alt="" className='bg-transparent lg:h-[220px] md:h-[150px] sm:h-[120px] h-[100px]'/>
-                        <p className='font-bold text-sm text-center'>Tocilog</p>
-                    </div>
-                    <div className='bg-transparent flex flex-col items-center gap-2'>
-                        <img src={Pancit} alt="" className='bg-transparent lg:h-[220px] md:h-[150px] sm:h-[120px] h-[100px]'/>
-                        <p className='font-bold text-sm text-center'>Pancit</p>
-                    </div>
-
-                </div>
-
-            </div>
-
             <div className="flex  flex-col p-[30px] h-[250px] font-bold text-gray-800 
             items-center w-[dvw] justify-center sm:text-md sm:p-[30px] sm:h-[225px] border-2">
 
@@ -87,6 +65,27 @@ export const Home = () => {
                 >Order Now
                 </button>
 
+            </div>
+
+            <div className='lg:pt-8 sm:pt-8 pt-7 xl:h-[420px] lg:h-[380px] md:h-[320px] sm:h-[280px] h-[240px] lg:space-y-12 md:space-y-7 sm:space-y-8 space-y-5'>
+                <h1 className='font-bold'>Best Seller</h1>
+
+                <div className='grid grid-cols-3 h-full mx-3 bg-transparent ' >
+
+                    <div className='bg-transparent flex flex-col items-center gap-2'>
+                        <img src={Kinalas} alt="" className='bg-transparent lg:h-[220px] md:h-[150px] sm:h-[120px] h-[100px]' />
+                        <p className='font-bold text-sm text-center'>Kinalas</p>
+                    </div>
+                    <div className='bg-transparent flex flex-col items-center gap-2'>
+                        <img src={Tocilog} alt="" className='bg-transparent lg:h-[220px] md:h-[150px] sm:h-[120px] h-[100px]' />
+                        <p className='font-bold text-sm text-center'>Tocilog</p>
+                    </div>
+                    <div className='bg-transparent flex flex-col items-center gap-2 '>
+                        <img src={Pancit} alt="" className='bg-transparent lg:h-[220px] md:h-[150px] sm:h-[120px] h-[100px] scale-[110%] ' />
+                        <p className='font-bold text-sm text-center'>Pancit</p>
+                    </div>
+
+                </div>
             </div>
 
             <div className="grid grid-rows-2 gap-[100px] h-[250px] sm:h-[300px] p-[20px] pt-8 bg-yellow-500
