@@ -6,6 +6,9 @@ import { useState } from 'react';
 import { Navlinks } from './Navlink.js';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebook } from '@fortawesome/free-brands-svg-icons';
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
+
+
 
 
 
@@ -14,7 +17,9 @@ export const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
 
     return (
+
         <div className='flex flex-row justify-between items-center mx-1 my-0 sm:pt-3 md:p-3 p-2 h-[70px]'>
+
 
             <div className="">
                 <Link to="/"><img src={BeatJamLogo}
@@ -70,9 +75,15 @@ export const Navbar = () => {
                     {isOpen &&
                         <div className="flex flex-col text-[12px] gap-4 mt-auto justify-center mb-10" >
                             <p>Follow us on social media:</p>
-                            <a href='https://www.facebook.com/profile.php?id=61581443513987'>
-                                <FontAwesomeIcon className='h-5 text-gray-900 hover:scale-110' icon={faFacebook} />
-                            </a>
+                            <div className='flex justify-center items-center gap-5'>
+                                <a href='https://www.facebook.com/profile.php?id=61581443513987' target="_blank">
+                                    <FontAwesomeIcon className='h-5 text-gray-900 hover:scale-110'  icon={faFacebook} />
+                                </a>
+                                <a href="mailto:beatjamrestobar@gmail.com" target="_blank" >
+                                    <FontAwesomeIcon className='h-5 text-gray-900 hover:scale-110' icon={faEnvelope} />
+                                </a>
+                            </div>
+
                         </div>
                     }
 

@@ -9,23 +9,30 @@ import Mixed from '../images/menu/mixed.png';
 import Kinalas from '../images/best-seller/kinalas.png'
 import Tocilog from '../images/best-seller/tocilog.png'
 import Pancit from '../images/best-seller/pancit.png'
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faAngleLeft, faAngleRight } from "@fortawesome/free-solid-svg-icons";
+
 
 export const Home = () => {
 
-    const [activeIndex, setActiveIndex] = useState(0);
+    const [currentSlide, setCurrentSlide] = useState(0);
     const navigate = useNavigate();
 
     const slides = [WaffleKing, Waffle, BiscoffCake, Milktea, Mixed];
 
     useEffect(() => {
         const interval = setInterval(() => {
-            setActiveIndex((prev) => (prev + 1) % slides.length)
+            setCurrentSlide((prev) => (prev + 1) % slides.length)
         }, 6000);
         return () => clearInterval(interval);
     }, [slides.length]);
 
     function handleClick() {
         navigate("/order");
+    }
+
+    const PrevSlide = () => {
+        setCurrentSlide((prev) => (prev === 0 ? slides.length -1 : prev -1 ))
     }
 
     return (
@@ -35,19 +42,25 @@ export const Home = () => {
 
                 <div className=" w-[--image-slide] h-[--image-slide] overflow-hidden  m-auto rounded-lg 
                 ">
-                    <div className="flex image-animate w-[1500px] sm:w-[3000px]">
+                    <div className="flex image-animate w-[1500px] sm:w-[3000px] relative">
                         {slides.map((slide, index) => (
-                            <div key={index} className="image-slide"><img src={slide} alt="" /></div>
+                            <div key={index} className="w-[--image-slide] h-[--image-slide]"><img src={slide} alt="" /></div>
                         ))}
-
                     </div>
                 </div>
-
+                <button
+                    className="absolute left-20 top-1/2 -translate-y-1/2 bg-white p-2 rounded-full shadow hover:scale-110 opacity-90" onClick={() => PrevSlide()}>
+                    <FontAwesomeIcon icon={faAngleLeft} className='bg-transparent'  />
+                </button>
+                <button
+                    className="absolute  right-20 top-1/2 -translate-y-1/2 bg-white p-2 rounded-full shadow hover:scale-110">
+                    <FontAwesomeIcon icon={faAngleRight} className='bg-transparent'/>
+                </button>
                 <div className=' absolute flex bottom-0 items-center w-full sm:gap-4 gap-3  justify-center sm:h-10 h-6 
                  bg-transparent'>
                     {slides.map((_, i) => {
                         return (
-                            <span key={i} className={`block sm:w-2 w-2 sm:h-2 h-2  duration-100 transition-colors rounded-full ${activeIndex === i ? "bg-yellow-600" : "bg-gray-400"}`} ></span>
+                            <span key={i} className={`block sm:w-2 w-2 sm:h-2 h-2  duration-100 transition-colors rounded-full ${currentSlide === i ? "bg-yellow-600" : "bg-gray-400"}`} ></span>
                         );
                     })}
                 </div>
@@ -59,7 +72,7 @@ export const Home = () => {
                 <p>We are open from Monday to Saturday <br />8am-9pm.</p>
                 <p className='mt-2'>Enjoy the delicous foods with a good view.</p>
 
-                <button className='btn-animate mt-[20px] p-[10px] sm:w-[150px] w-[120px] sm:h-[45px] h-[40px] border-none bg-yellow-500 text-white font-bold text-md 
+                <button className='btn-animate mt-[20px] p-[10px] sm:w-[150px] w-[120px] sm:h-[45px] h-[45px] border-none bg-yellow-500 text-white font-bold text-md 
                 sm:justify-center  sm:p-[5px]'
                     onClick={handleClick}
                 >Order Now
@@ -70,7 +83,7 @@ export const Home = () => {
             <div className='lg:pt-8 sm:pt-8 pt-7 xl:h-[420px] lg:h-[380px] md:h-[320px] sm:h-[280px] h-[240px] lg:space-y-12 md:space-y-7 sm:space-y-8 space-y-5 '>
                 <h1 className='font-bold'>Best Seller</h1>
 
-                <div className='grid grid-cols-3 h-full mx-1 bg-transparent ' >
+                <div className='grid grid-cols-3 h-full 5xl:mx-[900px] 4xl:mx-[800px] 3xl:mx-[500px] 2xl:mx-[300px] xl:mx-[200px] lg:mx-[80px] mx-1 bg-transparent ' >
 
                     <div className='bg-transparent flex flex-col items-center gap-2'>
                         <img src={Kinalas} alt="" className='bg-transparent lg:h-[220px] md:h-[150px] sm:h-[120px] h-[100px]' />
