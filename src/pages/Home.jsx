@@ -54,7 +54,7 @@ export const Home = () => {
             </div>
 
             <div className="flex  flex-col p-[30px] h-[250px] font-bold text-gray-800 
-            items-center w-[dvw] justify-center sm:text-md sm:p-[30px] sm:h-[225px] border-2">
+            items-center w-[dvw] justify-center sm:text-md sm:p-[30px] sm:h-[225px] border-b-2 border-gray-300">
 
                 <p>We are open from Monday to Saturday <br />8am-9pm.</p>
                 <p className='mt-2'>Enjoy the delicous foods with a good view.</p>
@@ -67,7 +67,7 @@ export const Home = () => {
 
             </div>
 
-            <div className='lg:pt-8 sm:pt-8 pt-7 xl:h-[420px] lg:h-[380px] md:h-[320px] sm:h-[280px] h-[240px] lg:space-y-12 md:space-y-7 sm:space-y-8 space-y-5'>
+            <div className='lg:pt-8 sm:pt-8 pt-7 xl:h-[420px] lg:h-[380px] md:h-[320px] sm:h-[280px] h-[240px] lg:space-y-12 md:space-y-7 sm:space-y-8 space-y-5 '>
                 <h1 className='font-bold'>Best Seller</h1>
 
                 <div className='grid grid-cols-3 h-full mx-3 bg-transparent ' >

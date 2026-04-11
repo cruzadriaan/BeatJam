@@ -14,8 +14,7 @@ export const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
 
     return (
-        <div className='flex flex-row justify-between items-center mx-1 my-0 sm:pt-3 md:p-3 p-2 h-[70px]
-         '>
+        <div className='flex flex-row justify-between items-center mx-1 my-0 sm:pt-3 md:p-3 p-2 h-[70px]'>
 
             <div className="">
                 <Link to="/"><img src={BeatJamLogo}

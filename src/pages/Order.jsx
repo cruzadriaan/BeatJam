@@ -44,7 +44,7 @@ export const Order = () => {
 
                         <label className='text-sm text-left font-semibold text-gray-700'>
                             Last Name:
-                            <input type="text" className='border border-gray-400  p-1 w-full rounded-md' value={formData.lastName} onChange={handleInput} required />
+                            <input type="text" className='border border-gray-400  p-1 w-full rounded-md' name="lastName" value={formData.lastName} onChange={handleInput} required />
                         </label>
                     </div>
 
@@ -52,14 +52,14 @@ export const Order = () => {
                     <div className='flex flex-row gap-10'>
                         <label className='text-sm text-left font-semibold  text-gray-700 '>
                             Contact Number:
-                            <input type="email" placeholder="09xx-xxx-xxxx" className='border border-gray-400  p-1 ml-1 w-full rounded-md' value={formData.contact} onChange={handleInput} />
+                            <input type="tel" placeholder="09xx-xxx-xxxx" className='border border-gray-400  p-1 ml-1 w-full rounded-md' name="contact" value={formData.contact} onChange={handleInput} />
                         </label>
                     </div>
 
                     <div className='flex flex-row gap-10'>
                         <label className='text-sm text-left font-semibold  text-gray-700 '>
                             Email Address:
-                            <input type="email" placeholder="(optional)" className='border border-gray-400  p-1 ml-1 w-full rounded-md' value={formData.email} onChange={handleInput} />
+                            <input type="email" placeholder="(optional)" className='border border-gray-400  p-1 ml-1 w-full rounded-md' name="email" value={formData.email} onChange={handleInput} />
                         </label>
                     </div>
 
@@ -68,14 +68,14 @@ export const Order = () => {
                             <label className='flex items-left justify-left text-sm font-semibold text-gray-700 '>
                                 Delivery Address:
                             </label>
-                            <textarea type="text" className='border border-gray-400  p-1 w-full  rounded-md resize-none' value={formData.deliveryAddress} onChange={handleInput} required />
+                            <textarea type="text" className='border border-gray-400  p-1 w-full  rounded-md resize-none' name="deliveryAddress" value={formData.deliveryAddress} onChange={handleInput} required />
                         </div>
 
                         <div className='flex flex-col '>
                             <label className='flex items-left justify-left text-sm font-semibold text-gray-700 '>
                                 Notes:
                             </label>
-                            <textarea type="text" className='border border-gray-400  p-1 w-full rounded-md resize-none' value={formData.notes} onChange={handleInput} required />
+                            <textarea type="text" className='border border-gray-400  p-1 w-full rounded-md resize-none' name="notes" value={formData.notes} onChange={handleInput} required />
                         </div>
                     </div>
                     <div className='flex flex-row justify-center items-center gap-5'>
