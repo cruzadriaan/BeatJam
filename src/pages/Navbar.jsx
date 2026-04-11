@@ -14,12 +14,12 @@ export const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
 
     return (
-        <div className='flex flex-row justify-between items-center sm:mx-6 mx-6 my-0 sm:pt-3 md:p-3 p-2
+        <div className='flex flex-row justify-between items-center mx-1 my-0 sm:pt-3 md:p-3 p-2 h-[70px]
          '>
 
             <div className="">
                 <Link to="/"><img src={BeatJamLogo}
-                    className='w-[120px] ' /></Link>
+                    className='sm:w-[120px] w-[100px]' /></Link>
             </div>
 
             <div>
@@ -47,20 +47,20 @@ export const Navbar = () => {
                 text-gray-800 flex flex-col items-left sm:items-center fixed top-0 right-0 z-50 h-dvh sm:gap-2  sm:translate-x-5
                 sm:flex-row sm:relative sm:flex sm:top-0 sm:h-0 transition-transform transition-opacity duration-500`}>
 
-                    <div className='flex flex-col items-end p-2'>
+                    <div className='flex flex-col items-end p-3'>
                         <button className="sm:hidden" onClick={() => setIsOpen(!isOpen)}>
                             {isOpen &&
-                                <div className=' w-10 sm:hidden border rounded-full p-1 px-3 font-semibold hover:text-white text-lg border-black hover:bg-gray-800'>
+                                <div className=' w-8 sm:hidden border rounded-full p-1  font-semibold hover:text-white text-sm border-black hover:bg-gray-800'>
                                     X
                                 </div>
                             }
                         </button>
                     </div>
-                    <div className='flex sm:flex-row flex-col items-center sm:w-full w-[180px] p-5 justify-center md:gap-12 sm:gap-6 gap-10'>
+                    <div className='flex sm:flex-row flex-col sm:w-full w-[180px] p-5 pl-7 justify-center md:gap-12 sm:gap-7 gap-10'>
                         {Navlinks.map((nav, index) => (
-                            <div key={index} className='flex items-center justify-center gap-1'>
-                                <FontAwesomeIcon icon={nav.icon} className="text-gray-700 pb-1 h-5" />
-                                <Link to={nav.src} className='pb-0.2 font-bold border-b-2 border-transparent  hover:border-[#E59A18]' onClick={() => setIsOpen(false)}>{nav.name}</Link>
+                            <div key={index} className='flex items-left md:gap-1.5 gap-1.5'>
+                                <FontAwesomeIcon icon={nav.icon} className="text-gray-700 md:mt-0.5 sm:mt-1 sm:pb-1 pb-0.5  h-5" />
+                                <Link to={nav.src} className='pb-0.2 font-bold border-b-2 border-transparent sm:text-lg hover:border-[#E59A18]' onClick={() => setIsOpen(false)}>{nav.name}</Link>
                             </div>
                         ))}
                     </div>
