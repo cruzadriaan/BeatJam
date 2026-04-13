@@ -35,15 +35,15 @@ export const Order = () => {
 
     return (
         <>
-            <div className='flex flex-col gap-5 p-[20px] mt-5 border border-gray-300  rounded-xl h-fit max-w-[90%] w-fit drop-shadow-sm items-center mx-auto '>
+            <div className='flex flex-col gap-5 p-[20px] mt-5 border border-gray-300  rounded-xl h-fit max-w-[90%] w-fit drop-shadow-sm items-center mx-auto'>
 
                 <h1 className='font-bold text-3xl mb-5'>Order Form</h1>
 
                 <form className='flex flex-col gap-5 w-fit'>
-                    <div className='flex items-left gap-5'>
-                        <label className='text-sm text-left font-semibold text-gray-700'>
+                    <div className='flex items-left gap-5 bg-transparent '>
+                        <label className='text-sm text-left font-semibold text-gray-700 '>
                             First Name:
-                            <input type="text" className='border border-gray-400 p-1 w-full rounded-md' name="firstName" value={formData.firstName} onChange={handleInput} required />
+                            <input type="text" className='border border-gray-400 p-1 w-full rounded-md ' name="firstName" value={formData.firstName} onChange={handleInput} required />
                         </label>
 
                         <label className='text-sm text-left font-semibold text-gray-700'>
@@ -53,21 +53,21 @@ export const Order = () => {
                     </div>
 
 
-                    <div className='flex flex-row gap-10'>
+                    <div className='flex flex-row gap-10 '>
                         <label className='text-sm text-left font-semibold  text-gray-700 '>
                             Contact Number:
-                            <input type="tel" placeholder="09xx-xxx-xxxx" className='border border-gray-400  p-1 ml-1 w-full rounded-md' name="contact" value={formData.contact} onChange={handleInput} />
+                            <input type="tel" placeholder="09xx-xxx-xxxx" className=' border border-gray-400  p-1 ml-1 w-full rounded-md' name="contact" value={formData.contact} onChange={handleInput} />
                         </label>
                     </div>
 
-                    <div className='flex flex-row gap-10'>
+                    <div className='flex flex-row gap-10 bg-transparent'>
                         <label className='text-sm text-left font-semibold  text-gray-700 '>
                             Email Address:
                             <input type="email" placeholder="(optional)" className='border border-gray-400  p-1 ml-1 w-full rounded-md' name="email" value={formData.email} onChange={handleInput} />
                         </label>
                     </div>
 
-                    <div className='flex flex-col gap-2  '>
+                    <div className='flex flex-col gap-2  bg-transparent'>
                         <div className='flex flex-col '>
                             <label className='flex items-left justify-left text-sm font-semibold text-gray-700 '>
                                 Delivery Address:
@@ -79,18 +79,18 @@ export const Order = () => {
                             <label className='flex items-left justify-left text-sm font-semibold text-gray-700 '>
                                 Notes:
                             </label>
-                            <textarea type="text" className='border border-gray-400  p-1 w-full rounded-md resize-none' name="notes" value={formData.notes} onChange={handleInput} required />
+                            <textarea type="text" className='border border-gray-400  p-1 w-full rounded-md resize-none ' name="notes" value={formData.notes} onChange={handleInput} required />
                         </div>
                     </div>
-                    <div className='flex flex-row justify-center items-center gap-5'>
+                    <div className='flex flex-row justify-center items-center gap-5 bg-transparent'>
                         <button className='p-3 border w-[140px]  rounded-lg bg-yellow-500 text-white font-bold' onClick={handleSubmit}>Submit Order</button>
                         <button className='p-3 border w-[140px] rounded-lg bg-red-500 text-white font-bold' onClick={handleClear}>Clear</button>
                     </div>
-                    <div className='flex flex-col justify-center items-center h-dv sm:mt-30 mt-[100px]'>
+                    {/* <div className='flex flex-col justify-center items-center h-dv sm:mt-30 mt-[100px]'>
                         <img className='w-[300px] ' src={Cat} alt="" />
                         <h1>Order Page is currently in progress..</h1>
                         <p className='font-bold mb-20'>- Adrian</p>
-                    </div>
+                    </div> */}
                 </form>
 
             </div>
