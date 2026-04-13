@@ -23,16 +23,15 @@ p {
     }
 }
 
-.image-slide img {
+/* .image-slide img {
     @apply w-[300px] h-[300px] sm:h-[600px] sm:w-[600px];
     object-fit: cover;
-}
-.image-animate {
+} */
+/* .image-animate {
     animation: slide 30s infinite;
-}
+} */
 
-
-@keyframes slide {
+/* @keyframes slide {
     0% {
         transform: translateX(0);
     }
@@ -72,7 +71,7 @@ p {
     95% {
         transform: translateX(calc(var(--image-slide) * -4));
     }
-}
+} */
 
 
 .btn-animate {

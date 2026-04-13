@@ -32,30 +32,47 @@ export const Home = () => {
     }
 
     const PrevSlide = () => {
-        setCurrentSlide((prev) => (prev === 0 ? slides.length -1 : prev -1 ))
+        setCurrentSlide((prev) => (prev === 0 ? slides.length -1 : prev - 1  ));
+    }
+
+    const NextSlide = () => {
+        setCurrentSlide((prev) => (prev + 1) % slides.length);
     }
 
     return (
         <div className='h-full w-dvw'>
+
             <div className="flex flex-col relative  bg-gray-200 h-[350px] b-none 
               sm:mt-1  sm:h-[700px]">
 
-                <div className=" w-[--image-slide] h-[--image-slide] overflow-hidden  m-auto rounded-lg 
+                {/* container */}
+                <div className=" sm:w-[600px] sm:h-[600px] w-[300px] h-[300px] overflow-hidden m-auto rounded-lg 
                 ">
-                    <div className="flex image-animate w-[1500px] sm:w-[3000px] relative">
+                    <div 
+                    className="flex relative duration-500 ease-in-out"  
+                    style={{
+                        transform:`translateX(-${currentSlide * (100 / slides.length)}%)`,
+                        width:`${slides.length * 100}%`
+                    }}>
+
                         {slides.map((slide, index) => (
-                            <div key={index} className="w-[--image-slide] h-[--image-slide]"><img src={slide} alt="" /></div>
+                            <div key={index} className="w-full h-full "><img src={slide} className='sm:w-[600px] sm:h-[600px] w-[300px] h-[300px] object-cover block' alt="" /></div>
                         ))}
                     </div>
+
                 </div>
+
+
                 <button
-                    className="absolute left-20 top-1/2 -translate-y-1/2 bg-white p-2 rounded-full shadow hover:scale-110 opacity-90" onClick={() => PrevSlide()}>
+                    className="absolute 4xl:left-[600px]  3xl:left-[600px] 2xl:left-[420px] xl:left-[320px] lg:left-[180px] md:left-[30px] sm:left-[10px] left-[100px] top-1/2 -translate-y-1/2 bg-white p-2 rounded-full shadow hover:scale-110  z-10" onClick={() => PrevSlide()}>
                     <FontAwesomeIcon icon={faAngleLeft} className='bg-transparent'  />
                 </button>
+
                 <button
-                    className="absolute  right-20 top-1/2 -translate-y-1/2 bg-white p-2 rounded-full shadow hover:scale-110">
+                    className="absolute 3xl:right-[600px] 2xl:right-[420px] xl:right-[320px]  lg:right-[180px] md:right-[30px] sm:right-[10px] right-[100px] top-1/2 -translate-y-1/2 bg-white p-2 rounded-full shadow hover:scale-110 z-10" onClick={() => NextSlide()}>
                     <FontAwesomeIcon icon={faAngleRight} className='bg-transparent'/>
                 </button>
+
                 <div className=' absolute flex bottom-0 items-center w-full sm:gap-4 gap-3  justify-center sm:h-10 h-6 
                  bg-transparent'>
                     {slides.map((_, i) => {
@@ -64,6 +81,7 @@ export const Home = () => {
                         );
                     })}
                 </div>
+
             </div>
 
             <div className="flex  flex-col p-[30px] h-[250px] font-bold text-gray-800 
