@@ -3,7 +3,7 @@ import './ContactUs.css';
 
 export const ContactUs = () => {
   return (
-    <div className='flex flex-col mt-20'>
+    <div className='flex flex-col mt-20 mx-3'>
       <h1 className=' text-3xl mb-10'>Contact Us</h1>
 
       <div className='flex flex-col items-center justify-center text-md gap-3 '>
@@ -15,9 +15,6 @@ export const ContactUs = () => {
         </div>
         <div>
           <h1>Email Address: beatjamrestobar@gmail.com</h1>
-        </div>
-        <div>
-          <h1>Social media:</h1>
         </div>
 
         <form action="" className='flex flex-col gap-5 items-center justify-center  mt-10'>
