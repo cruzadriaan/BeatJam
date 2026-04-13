@@ -64,12 +64,12 @@ export const Home = () => {
 
 
                 <button
-                    className="absolute 4xl:left-[600px]  3xl:left-[600px] 2xl:left-[420px] xl:left-[320px] lg:left-[180px] md:left-[30px] sm:left-[10px] left-[15px] top-1/2 -translate-y-1/2 bg-white p-2 rounded-full shadow hover:scale-110  z-10" onClick={() => PrevSlide()}>
+                    className="absolute 4xl:left-[600px]  3xl:left-[600px] 2xl:left-[420px] xl:left-[320px] lg:left-[180px] md:left-[30px] sm:left-[10px] left-[10px] top-1/2 -translate-y-1/2 bg-white p-2 rounded-full shadow hover:scale-110  z-10" onClick={() => PrevSlide()}>
                     <FontAwesomeIcon icon={faAngleLeft} className='bg-transparent'  />
                 </button>
 
                 <button
-                    className="absolute 3xl:right-[600px] 2xl:right-[420px] xl:right-[320px]  lg:right-[180px] md:right-[30px] sm:right-[10px] right-[15px] top-1/2 -translate-y-1/2 bg-white p-2 rounded-full shadow hover:scale-110 z-10" onClick={() => NextSlide()}>
+                    className="absolute 3xl:right-[600px] 2xl:right-[420px] xl:right-[320px]  lg:right-[180px] md:right-[30px] sm:right-[10px] right-[10px] top-1/2 -translate-y-1/2 bg-white p-2 rounded-full shadow hover:scale-110 z-10" onClick={() => NextSlide()}>
                     <FontAwesomeIcon icon={faAngleRight} className='bg-transparent'/>
                 </button>
 

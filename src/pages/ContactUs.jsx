@@ -17,7 +17,7 @@ export const ContactUs = () => {
           <h1>Email Address: beatjamrestobar@gmail.com</h1>
         </div>
 
-        <form action="" className='flex flex-col gap-5 items-center justify-center mt-10 mx-5'>
+        <form action="" className='flex flex-col gap-5 items-center justify-center mt-10 mx-15'>
           <input type="text" placeholder='First Name' className=''/>
           <input type="email" placeholder='Email' />
           <textarea name="" id="" placeholder='Message' className='h-[200px] border resize-none'></textarea>
