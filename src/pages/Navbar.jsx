@@ -18,7 +18,7 @@ export const Navbar = () => {
 
     return (
 
-        <div className='flex flex-row justify-between items-center mx-1 my-0 sm:pt-3 md:p-3 p-2 h-[70px]'>
+        <div className='fixed top-0 w-full  flex flex-row justify-between items-center  sm:pt-3 md:p-3 p-3 h-[70px] z-50'>
 
 
             <div className="">

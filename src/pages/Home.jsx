@@ -42,8 +42,8 @@ export const Home = () => {
     return (
         <div className='h-full w-dvw'>
 
-            <div className="flex flex-col relative  bg-gray-200 h-[350px] b-none 
-              sm:mt-1  sm:h-[700px]">
+            <div className="flex flex-col relative  bg-gray-200 sm:h-[700px] h-[400px] b-none 
+              sm:mt-12 mt-10 ">
 
                 {/* container */}
                 <div className=" sm:w-[600px] sm:h-[600px] w-[300px] h-[300px] overflow-hidden m-auto rounded-lg 
@@ -73,7 +73,7 @@ export const Home = () => {
                     <FontAwesomeIcon icon={faAngleRight} className='bg-transparent'/>
                 </button>
 
-                <div className=' absolute flex bottom-0 items-center w-full sm:gap-4 gap-3  justify-center sm:h-10 h-6 
+                <div className=' absolute flex bottom-0 items-center w-full sm:gap-4 gap-3  justify-center sm:h-10 h-12 
                  bg-transparent'>
                     {slides.map((_, i) => {
                         return (
