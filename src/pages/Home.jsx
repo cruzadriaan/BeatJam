@@ -27,7 +27,7 @@ export const Home = () => {
         return () => clearInterval(interval);
     }, [slides.length]);
 
-    function handleClick() {
+    function handleClickOrder() {
         navigate("/order");
     }
 
@@ -92,7 +92,7 @@ export const Home = () => {
 
                 <button className='btn-animate mt-[20px] p-[10px] sm:w-[150px] w-[120px] sm:h-[45px] h-[45px] border-none bg-yellow-500 text-white font-bold text-md 
                 sm:justify-center  sm:p-[5px]'
-                    onClick={handleClick}
+                    onClick={handleClickOrder}
                 >Order Now
                 </button>
 

@@ -7,6 +7,7 @@ import { Gallery } from './pages/Gallery';
 import { ContactUs } from './pages/ContactUs';
 import { Order } from './pages/Order';
 import { HashRouter as Router, Routes, Route } from 'react-router-dom';
+import { ScrollToTopArrow } from './pages/ScrollToTopArrow';
 
 function App() {
 
@@ -21,6 +22,7 @@ function App() {
           <Route path="/contact" element={<ContactUs />} />
           <Route path="/order" element={<Order />} />
         </Routes>
+        <ScrollToTopArrow />
         
       </Router>
     </div>
