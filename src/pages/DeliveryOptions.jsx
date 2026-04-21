@@ -17,7 +17,7 @@ export const DeliveryOptions = () => {
 
     return (
         <div className='flex items-center justify-center h-screen w-screen'>
-            <div className="flex flex-col text-white gap-12 sm:py-[80px] py-[60px] md:px-[120px] sm:px-[60px] px-[35px] bg-gray-800 rounded-xl">
+            <div className="flex flex-col text-white gap-12 sm:py-[80px] py-[60px] md:px-[120px] sm:px-[60px] px-[20px] bg-gray-800 rounded-xl">
                 <div className="bg-transparent">
                     <h1 className=" text-white sm:text-4xl text-3xl ">Delivery Options</h1>
                 </div>
