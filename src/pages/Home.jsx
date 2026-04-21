@@ -28,7 +28,7 @@ export const Home = () => {
     }, [slides.length]);
 
     function handleClickOrder() {
-        navigate("/order");
+        navigate("/deliveryOptions");
     }
 
     const PrevSlide = () => {
