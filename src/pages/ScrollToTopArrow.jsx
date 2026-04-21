@@ -23,7 +23,7 @@ export const ScrollToTopArrow = () => {
     return (
         <>
             {isVisible && (
-                <div className='fixed left-1/2 bottom-0 p-2 border border-gray-400 rounded-full w-10 cursor-pointer hover:bg-yellow-400 animate-bounce '
+                <div className='fixed left-1/2 transform translate-x-1/2 bottom-0 p-2 border border-gray-400 rounded-full w-10 cursor-pointer hover:bg-gray-200 animate-bounce '
                     onClick={() => {
                         window.scrollTo({
                             top: 0,
