@@ -3,20 +3,37 @@ import PancitSizzler from '../images/menu/pancit-sizzler.jpg';
 import SizzlerCombo from '../images/menu/sizzler-combo.jpg';
 import FlavoredChicken from '../images/menu/flavored-chicken.jpg';
 import PizzaFries from '../images/menu/pizza-fries.jpg';
+import { useState } from 'react';
 
 export const Menu = () => {
-    return(
-        <div className="">
-            
-            <div className="grid 2xl:grid-cols-4 xl:grid-cols-3 lg:grid-cols-2 grid-cols-1 m-3 mt-1 gap-2">
-                <img src={PancitSizzler} className='max-[420px]:h-[00px]' alt="" />
-                <img src={SizzlerCombo}  alt="" />
-                <img src={SizzlerCombo}  alt="" />
-                <img src={FlavoredChicken}  alt="" />
-                <img src={PizzaFries}  alt="" />
-                
 
+    const [openImage, setOpenImage] = useState(false);
+    const Menus = [
+        {name: "PancitSizzler", image:PancitSizzler},
+        {name: "SizzlerCombo", image:SizzlerCombo}, 
+        {name: "FlavoredChicken", image:FlavoredChicken},
+        {name: "PizzaFries", image:PizzaFries}]
+
+    return (
+        <div className="">
+
+
+            <div className="grid 2xl:grid-cols-4 xl:grid-cols-3 lg:grid-cols-2 grid-cols-1 m-3 mt-20 gap-2 justify-items-center">
+                {Menus.map((option, index) => (
+                    <div key={index} onClick={()=>setOpenImage(option)}>
+                        <img src={option.image} className='sm:w-[600px] w-auto cursor-pointer' alt={option.name} />
+                    </div>
+                ))}
             </div>
+
+            {openImage &&
+                <div className='fixed inset-0 bg-black bg-opacity-95 flex flex-col items-center justify-center cursor-pointer pt-[80px]' onClick={()=>setOpenImage(null)}>
+                    <img src={openImage.image} className='w-[700px]'></img>
+                </div>
+            }
+            
+
+
         </div>
     );
 }

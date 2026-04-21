@@ -35,7 +35,7 @@ export const Order = () => {
 
     return (
         <>
-            <div className='flex flex-col gap-5 p-[20px] mt-5 border border-gray-300  rounded-xl h-fit max-w-[90%] w-fit drop-shadow-sm items-center mx-auto'>
+            <div className='flex flex-col gap-5 p-[20px] mt-20 border border-gray-300  rounded-xl h-fit max-w-[90%] w-fit drop-shadow-sm items-center mx-auto'>
 
                 <h1 className='font-bold text-3xl mb-5'>Order Form</h1>
 
