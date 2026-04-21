@@ -35,12 +35,12 @@ export const Order = () => {
 
     return (
         <>
-            <div className='flex flex-col gap-5 p-[30px] mt-20 border border-gray-300  h-fit max-w-[90%] w-fit drop-shadow-sm items-center mx-auto'>
+            <div className='flex flex-col gap-5 px-[20px] py-[30px] mt-20 border border-gray-300  h-fit max-w-[90%] w-fit drop-shadow-sm items-center mx-auto ' >
                 
                 <h1 className='font-bold text-2xl mb-5'>Order Form</h1>
                 <div className='flex flex-row w-full items-center justify-center text-white gap-10'>
-                    <button className='h-25 font-bold bg-red-500 sm:p-12 p-10 rounded-xl hover:opacity-90'>Pick Up</button>
-                    <button className='h-25 font-bold bg-green-600 sm:p-12 p-10 rounded-xl hover:opacity-90'>Delivery</button>
+                    <button className='h-25 font-bold bg-red-500 sm:p-12 p-9 rounded-xl hover:opacity-90'>Pick Up</button>
+                    <button className='h-25 font-bold bg-green-600 sm:p-12 p-9 rounded-xl hover:opacity-90'>Delivery</button>
                 </div>
                 <form className='flex flex-col gap-5 w-fit mt-5'>
                     <div className='flex items-left gap-5 bg-transparent '>
