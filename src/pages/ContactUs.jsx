@@ -3,10 +3,11 @@ import './ContactUs.css';
 
 export const ContactUs = () => {
   return (
-    <div className='flex flex-col mt-20 mx-3'>
+    <div className='flex flex-col mt-20 4xl:mx-[900px] 3xl:mx-[700px] 2xl:mx-[500px] xl:mx-[300px] lg:mx-[200px] md:mx-20 mx-10 
+    border border-gray-900  p-8 rounded-lg'>
       <h1 className=' text-3xl mb-10'>Contact Us</h1>
 
-      <div className='flex flex-col items-center justify-center text-md gap-3 '>
+      <div className='flex flex-col items-center justify-center md:text-lg sm:text-md text-sm gap-3 '>
         <div className=''>
           <h1>Address: Cawayan Uno Badajos, San Francisco Quezon Orange Apartment</h1>
         </div>
