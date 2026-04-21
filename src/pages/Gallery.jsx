@@ -15,7 +15,7 @@ export const Gallery = () => {
             </div>
 
             <h1 className='mt-4 bg-yellow-600 font-bold text-white w-[190px] rounded-lg'>Events</h1>
-            <div className="grid grid-cols-2 gap-2 m-2">
+            <div className="grid grid-cols-2 gap-4 m-10 mt-2">
                 {events.map((event) => (
                     <img className='max-w-full cursor-pointer' key={event.name} src={event.image} alt={event.name} onClick={() => setOpenImage(event)} />
                 ))}
