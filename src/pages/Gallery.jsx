@@ -6,9 +6,9 @@ export const Gallery = () => {
     const [openImage, setOpenImage] = useState(false);
 
     return (
-        <div className='flex flex-col justify-center items-center mt-7'>  
+        <div className='flex flex-col justify-center items-center mt-20'>  
             <h1 className=' bg-yellow-600 font-bold text-white w-[190px] rounded-lg'>Satisfied Customers</h1>
-            <div className="grid grid-cols-2 gap-2 m-2">
+            <div className="grid grid-cols-2 gap-4 m-10 mt-2">
                 {gallery.map((gal, index) => (
                     <img className='max-w-full' key={index} src={gal.image} alt={gal.name} onClick={() => setOpenImage(gal)} />
                 ))}
