@@ -1,11 +1,9 @@
 import './Order.css';
 import Cat from '../images/copper.png';
 import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 export const OrderPickUp = () => {
-
-    const navigate = useNavigate();
 
     const [formData, setFormData] = useState({
         firstName: "",
@@ -34,10 +32,6 @@ export const OrderPickUp = () => {
 
     const handleSubmit = () => {
         alert("Order muna bago submit unggoy!");
-    }
-
-    const handleBack = () => {
-        navigate('/deliveryOptions');
     }
 
     return (
@@ -91,8 +85,8 @@ export const OrderPickUp = () => {
                         <button className='p-3 border w-[140px]  rounded-lg bg-yellow-500 text-white font-bold' onClick={handleSubmit}>Submit Order</button>
                         <button className='p-3 border w-[140px] rounded-lg bg-red-500 text-white font-bold' onClick={handleClear}>Clear</button>
                     </div>
-                    <div className='flex flex-col items-center justify-center w-full mt-5'>
-                        <button className='p-1 border w-[80px] rounded-lg bg-gray-500 text-white ' onClick={handleBack}>Back</button>
+                    <div className='w-full mt-8'>
+                       <Link to="/deliveryOptions" className='underline flex justify-end text-blue-900'>Go Back</Link>
                     </div>
                     {/* <div className='flex flex-col justify-center items-center h-dv sm:mt-30 mt-[100px]'>
                         <img className='w-[300px] ' src={Cat} alt="" />
