@@ -1,5 +1,6 @@
 import { useNavigate } from 'react-router-dom';
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import './Home.css';
 import WaffleKing from '../images/menu/waffle-king.jpg';
 import Waffle from '../images/menu/waffle.png';
@@ -32,7 +33,7 @@ export const Home = () => {
     }
 
     const PrevSlide = () => {
-        setCurrentSlide((prev) => (prev === 0 ? slides.length -1 : prev - 1  ));
+        setCurrentSlide((prev) => (prev === 0 ? slides.length - 1 : prev - 1));
     }
 
     const NextSlide = () => {
@@ -48,12 +49,12 @@ export const Home = () => {
                 {/* container */}
                 <div className=" sm:w-[600px] sm:h-[600px] w-[300px] h-[300px] overflow-hidden m-auto rounded-lg 
                 ">
-                    <div 
-                    className="flex relative duration-500 ease-in-out"  
-                    style={{
-                        transform:`translateX(-${currentSlide * (100 / slides.length)}%)`,
-                        width:`${slides.length * 100}%`
-                    }}>
+                    <div
+                        className="flex relative duration-500 ease-in-out"
+                        style={{
+                            transform: `translateX(-${currentSlide * (100 / slides.length)}%)`,
+                            width: `${slides.length * 100}%`
+                        }}>
 
                         {slides.map((slide, index) => (
                             <div key={index} className="w-full h-full "><img src={slide} className='sm:w-[600px] sm:h-[600px] w-[300px] h-[300px] object-cover block' alt="" /></div>
@@ -65,12 +66,12 @@ export const Home = () => {
 
                 <button
                     className="absolute 4xl:left-[600px]  3xl:left-[600px] 2xl:left-[420px] xl:left-[320px] lg:left-[180px] md:left-[30px] sm:left-[10px] left-[10px] top-1/2 -translate-y-1/2 bg-white p-2 rounded-full shadow hover:scale-110  z-10" onClick={() => PrevSlide()}>
-                    <FontAwesomeIcon icon={faAngleLeft} className='bg-transparent'  />
+                    <FontAwesomeIcon icon={faAngleLeft} className='bg-transparent' />
                 </button>
 
                 <button
                     className="absolute 3xl:right-[600px] 2xl:right-[420px] xl:right-[320px]  lg:right-[180px] md:right-[30px] sm:right-[10px] right-[10px] top-1/2 -translate-y-1/2 bg-white p-2 rounded-full shadow hover:scale-110 z-10" onClick={() => NextSlide()}>
-                    <FontAwesomeIcon icon={faAngleRight} className='bg-transparent'/>
+                    <FontAwesomeIcon icon={faAngleRight} className='bg-transparent' />
                 </button>
 
                 <div className=' absolute flex bottom-0 items-center w-full sm:gap-4 gap-3  justify-center sm:h-10 h-12 
@@ -98,10 +99,15 @@ export const Home = () => {
 
             </div>
 
-            <div className='lg:pt-8 sm:pt-8 pt-7 xl:h-[420px] lg:h-[380px] md:h-[320px] sm:h-[280px] h-[240px] lg:space-y-12 md:space-y-7 sm:space-y-8 space-y-5 '>
+            <div className='relative lg:pt-1 md:pt-3 sm:pt-2 pt-2 xl:h-[420px] lg:h-[450px] md:h-[320px] sm:h-[280px] h-[240px] lg:space-y-12 md:space-y-7 sm:space-y-8 space-y-5 '>
+                <div className='absolute sm:top-5 top-3 3xl:right-[400px] 2xl:right-[250px] xl:right-[200px] lg:right-[80px] sm:right-12 right-5'>
+
+                    <Link to="/menu" className='underline text-green-700 md:text-lg sm:text-md text-sm cursor-pointer'>View All</Link>
+                </div>
+
                 <h1 className='font-bold'>Best Seller</h1>
 
-                <div className='grid grid-cols-3 h-full 5xl:mx-[900px] 4xl:mx-[800px] 3xl:mx-[500px] 2xl:mx-[300px] xl:mx-[200px] lg:mx-[80px] mx-1 bg-transparent ' >
+                <div className='relative grid grid-cols-3 h-full 5xl:mx-[900px] 4xl:mx-[800px] 3xl:mx-[500px] 2xl:mx-[300px] xl:mx-[200px] lg:mx-[80px] mx-1 bg-transparent ' >
 
                     <div className='bg-transparent flex flex-col items-center gap-2'>
                         <img src={Kinalas} alt="" className='bg-transparent lg:h-[220px] md:h-[150px] sm:h-[120px] h-[100px]' />
