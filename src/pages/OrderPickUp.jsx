@@ -38,21 +38,21 @@ export const OrderPickUp = () => {
         <div className='flex flex-col mt-20 '>
             
 
-            <div className='flex flex-col gap-5 px-[20px] py-[30px] mt-20 border border-gray-300  h-fit max-w-[90%] w-fit drop-shadow-sm items-center mx-auto ' >
+            <div className='flex flex-col gap-5 px-[20px] py-[30px] mt-5 border border-gray-300  h-fit max-w-[90%] w-fit drop-shadow-sm items-center mx-auto ' >
 
 
                 <h1 className='font-bold text-2xl mb-5'>Order PickUp</h1>
 
-                <form className='flex flex-col gap-5 w-fit mt-5'>
-                    <div className='flex items-left gap-5 bg-transparent '>
-                        <label className='text-sm text-left font-semibold text-gray-700 '>
+                <form className='flex flex-col gap-5 w-fit mt-5 text-gray-700'>
+                    <div className='flex items-left gap-5 bg-transparent'>
+                        <label className='text-sm text-left font-semibold '>
                             First Name:
-                            <input type="text" className='border border-gray-400 p-1 w-full rounded-md ' name="firstName" value={formData.firstName} onChange={handleInput} required />
+                            <input type="text" className='border border-gray-400 p-1 w-full rounded-md text-black' name="firstName" value={formData.firstName} onChange={handleInput} required />
                         </label>
 
-                        <label className='text-sm text-left font-semibold text-gray-700'>
+                        <label className='text-sm text-left font-semibold'>
                             Last Name:
-                            <input type="text" className='border border-gray-400  p-1 w-full rounded-md' name="lastName" value={formData.lastName} onChange={handleInput} required />
+                            <input type="text" className='border border-gray-400 p-1 w-full rounded-md text-black' name="lastName" value={formData.lastName} onChange={handleInput} required />
                         </label>
                     </div>
 
@@ -60,14 +60,14 @@ export const OrderPickUp = () => {
                     <div className='flex flex-row gap-10 '>
                         <label className='text-sm text-left font-semibold  text-gray-700 '>
                             Contact Number:
-                            <input type="tel" placeholder="09xx-xxx-xxxx" className=' border border-gray-400  p-1 ml-1 w-full rounded-md' name="contact" value={formData.contact} onChange={handleInput} />
+                            <input type="tel" placeholder="09xx-xxx-xxxx" className=' border border-gray-400  p-1 ml-1 w-full rounded-md text-black' name="contact" value={formData.contact} onChange={handleInput} />
                         </label>
                     </div>
 
                     <div className='flex flex-row gap-10 bg-transparent'>
                         <label className='text-sm text-left font-semibold  text-gray-700 '>
                             Email Address:
-                            <input type="email" placeholder="(optional)" className='border border-gray-400  p-1 ml-1 w-full rounded-md' name="email" value={formData.email} onChange={handleInput} />
+                            <input type="email" placeholder="(optional)" className='border border-gray-400  p-1 ml-1 w-full rounded-md text-black' name="email" value={formData.email} onChange={handleInput} />
                         </label>
                     </div>
 
@@ -78,7 +78,7 @@ export const OrderPickUp = () => {
                             <label className='flex items-left justify-left text-sm font-semibold text-gray-700 '>
                                 Notes:
                             </label>
-                            <textarea type="text" className='border border-gray-400  p-1 w-full rounded-md resize-none ' name="notes" value={formData.notes} onChange={handleInput} required />
+                            <textarea type="text" className='border border-gray-400  p-1 w-full rounded-md resize-none text-black' name="notes" value={formData.notes} onChange={handleInput} required />
                         </div>
                     </div>
                     <div className='flex flex-row justify-center items-center gap-5 bg-transparent'>
