@@ -1,4 +1,4 @@
-import './Gallery.css';
+import '../styles/Gallery.css';
 import {gallery, events} from './GalleryData.js';
 import { useState } from 'react';
 

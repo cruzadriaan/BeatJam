@@ -1,4 +1,4 @@
-import './Order.css';
+import '../styles/Order.css';
 import Cat from '../images/copper.png';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';

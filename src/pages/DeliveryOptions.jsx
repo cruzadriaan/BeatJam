@@ -3,16 +3,20 @@ import Delivery from '../images/icon/delivery.png';
 import PickUp from '../images/icon/pickup.png';
 import { useNavigate } from 'react-router-dom';
 
-export const DeliveryOptions = () => {
+
+export const DeliveryOptions = ({setDeliveryOption}) => {
+
 
     const navigate = useNavigate();
 
     const handleOrderPickUp = () => {
-        navigate('/orderPickUp');
+        setDeliveryOption("Delivery Options: Pick up");
+        navigate('/orderSelection');
     }
 
         const handleOrderDelivery = () => {
-        navigate('/orderDelivery');
+        setDeliveryOption("Delivery Options: Delivery");
+        navigate('/orderSelection');
     }
 
     return (
@@ -26,7 +30,7 @@ export const DeliveryOptions = () => {
 
                     <div className='flex flex-col items-center justify-center gap-5 cursor-pointer font-bold bg-red-500 sm:w-[180px] w-[160px] sm:p-10 p-5 rounded-xl hover:opacity-90 ' onClick={handleOrderPickUp}>
                         <img src={PickUp} className='sm:w-[60px] w-[40px] bg-transparent' alt="" />
-                        <button className=''>Pick Up</button>
+                        <button className='' >Pick Up</button>
                     </div>
 
                     <div className='flex flex-col items-center justify-center gap-5 cursor-pointer font-bold bg-green-500 sm:w-[180px] w-[160px] sm:p-10 p-5 rounded-xl hover:opacity-90'  onClick={handleOrderDelivery}>

@@ -1,4 +1,4 @@
-import './ContactUs.css';
+import '../styles/ContactUs.css';
 // import contactus from '../images/contacts.jpg'
 
 export const ContactUs = () => {

@@ -1,4 +1,4 @@
-import './Order.css';
+import '../styles/Order.css';
 import Cat from '../images/copper.png';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
@@ -42,7 +42,11 @@ export const OrderPickUp = () => {
 
 
                 <h1 className='font-bold text-2xl mb-5'>Order PickUp</h1>
-
+                <form>
+                    <div>
+                        <img src="" alt="" />
+                    </div>
+                </form>
                 <form className='flex flex-col gap-5 w-fit mt-5 text-gray-700'>
                     <div className='flex items-left gap-5 bg-transparent'>
                         <label className='text-sm text-left font-semibold '>

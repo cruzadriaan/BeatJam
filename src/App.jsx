@@ -8,10 +8,14 @@ import { ContactUs } from './pages/ContactUs';
 import { OrderDelivery } from './pages/OrderDelivery';
 import { OrderPickUp } from './pages/OrderPickUp';
 import { DeliveryOptions } from './pages/DeliveryOptions';
+import { OrderSelection } from './pages/OrderSelection';
 import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import { ScrollToTopArrow } from './pages/ScrollToTopArrow';
+import { useState } from 'react';
 
 function App() {
+
+  const [deliveryOption, setDeliveryOption] = useState("");
 
   return (
     <div className="app">
@@ -24,7 +28,8 @@ function App() {
           <Route path="/contact" element={<ContactUs />} />
           <Route path="/orderDelivery" element={<OrderDelivery />} />
           <Route path="/orderPickUp" element={<OrderPickUp />} />
-          <Route path="/deliveryOptions" element={<DeliveryOptions />} />
+          <Route path="/deliveryOptions" element={<DeliveryOptions setDeliveryOption={setDeliveryOption} />} />
+          <Route path="/orderSelection" element={<OrderSelection deliveryOption={deliveryOption} />} />
         </Routes>
         <ScrollToTopArrow />
         

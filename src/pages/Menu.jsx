@@ -1,4 +1,4 @@
-import './Menu.css';
+import '../styles/Menu.css';
 import PancitSizzler from '../images/menu/pancit-sizzler.jpg';
 import SizzlerCombo from '../images/menu/sizzler-combo.jpg';
 import FlavoredChicken from '../images/menu/flavored-chicken.jpg';

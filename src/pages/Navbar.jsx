@@ -1,5 +1,5 @@
 import { Home } from './Home';
-import './Navbar.css';
+import '../styles/Navbar.css';
 import { Link } from 'react-router-dom';
 import BeatJamLogo from '../images/beatjam-logo.png';
 import { useState } from 'react';

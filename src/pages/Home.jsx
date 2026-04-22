@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import './Home.css';
+import '../styles/Home.css';
 import WaffleKing from '../images/menu/waffle-king.jpg';
 import Waffle from '../images/menu/waffle.png';
 import BiscoffCake from '../images/menu/biscoff-cake.jpg';
