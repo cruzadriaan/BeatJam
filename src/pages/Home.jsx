@@ -1,4 +1,3 @@
-import { useNavigate } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './Home.css';
@@ -14,10 +13,9 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleLeft, faAngleRight } from "@fortawesome/free-solid-svg-icons";
 
 
-export const Home = () => {
+export const Home = ({handleClickOrder}) => {
 
     const [currentSlide, setCurrentSlide] = useState(0);
-    const navigate = useNavigate();
 
     const slides = [WaffleKing, Waffle, BiscoffCake, Milktea, Mixed];
 
@@ -28,9 +26,6 @@ export const Home = () => {
         return () => clearInterval(interval);
     }, [slides.length]);
 
-    function handleClickOrder() {
-        navigate("/deliveryOptions");
-    }
 
     const PrevSlide = () => {
         setCurrentSlide((prev) => (prev === 0 ? slides.length - 1 : prev - 1));
