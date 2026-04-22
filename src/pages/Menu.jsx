@@ -1,8 +1,9 @@
 import '../styles/Menu.css';
-import PancitSizzler from '../images/menu/pancit-sizzler.jpg';
-import SizzlerCombo from '../images/menu/sizzler-combo.jpg';
-import FlavoredChicken from '../images/menu/flavored-chicken.jpg';
-import PizzaFries from '../images/menu/pizza-fries.jpg';
+import PancitSizzler from '../images/menu/menu-poster/pancit-sizzler.jpg';
+import SizzlerCombo from '../images/menu/menu-poster/sizzler-combo.jpg';
+import FlavoredChicken from '../images/menu/menu-poster/flavored-chicken.jpg';
+import PizzaFries from '../images/menu/menu-poster/pizza-fries.jpg';
+import Beverages from '../images/menu/menu-poster/beverages.jpg';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
@@ -15,7 +16,8 @@ export const Menu = () => {
         {name: "PancitSizzler", image:PancitSizzler},
         {name: "SizzlerCombo", image:SizzlerCombo}, 
         {name: "FlavoredChicken", image:FlavoredChicken},
-        {name: "PizzaFries", image:PizzaFries}]
+        {name: "PizzaFries", image:PizzaFries},
+        {name: "Bevarages", image:Beverages}]
 
         const handleClickOrder = () => {
             navigate("/deliveryOptions");

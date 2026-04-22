@@ -1,11 +1,11 @@
 import { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import '../styles/Home.css';
-import WaffleKing from '../images/menu/waffle-king.jpg';
-import Waffle from '../images/menu/waffle.png';
-import BiscoffCake from '../images/menu/biscoff-cake.jpg';
-import Milktea from '../images/menu/milktea.jpg';
-import Mixed from '../images/menu/mixed.png';
+import WaffleKing from '../images/menu/for-slider/waffle-king.jpg';
+import Waffle from '../images/menu/for-slider/waffle.png';
+import BiscoffCake from '../images/menu/for-slider/biscoff-cake.jpg';
+import Milktea from '../images/menu/for-slider/milktea.jpg';
+import Mixed from '../images/menu/for-slider/mixed.png';
 import Kinalas from '../images/best-seller/kinalas.png'
 import Tocilog from '../images/best-seller/tocilog.png'
 import Pancit from '../images/best-seller/pancit.png'
