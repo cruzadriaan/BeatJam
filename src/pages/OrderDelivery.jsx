@@ -42,25 +42,11 @@ export const OrderDelivery = () => {
 
     return (
         <div className='flex flex-col mt-20 '>
-            <h1 className='font-bold text-2xl mb-5'>Order Delivery</h1>
-
-            <div className='flex flex-row items-center justify-between w-[600px] mx-auto border'>
-                <div className='flex pl-2'>
-                    <h1 className=''>Chami</h1>
-                </div>
-
-                <div className='flex w-[400px] justify-between '>
-                    <label className='flex flex-col items-center text-sm'>Single<input type="radio" name='chami' className="accent-red-500 w-5 h-5"/></label>
-                    <label  className='flex flex-col items-center text-sm'>Double<input type="radio" name='chami' className="accent-red-500 w-5 h-5"/></label>
-                    <label  className='flex flex-col items-center text-sm'>Sharing<input type="radio" name='chami' className="accent-red-500 w-5 h-5"/></label>
-                    <label  className='flex flex-col items-center text-sm'>Barkada<input type="radio" name='chami' className="accent-red-500 w-5 h-5"/></label>
-                </div>
-            </div>
+            
 
             <div className='flex flex-col gap-5 px-[20px] py-[30px] mt-20 border border-gray-300  h-fit max-w-[90%] w-fit drop-shadow-sm items-center mx-auto ' >
 
-
-
+                <h1 className='font-bold text-2xl mb-5'>Order Delivery</h1>
 
                 <form className='flex flex-col gap-5 w-fit mt-5'>
                     <div className='flex items-left gap-5 bg-transparent '>
