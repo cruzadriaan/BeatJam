@@ -7,13 +7,13 @@ export const OrderSelection = ({ deliveryOption }) => {
     const [isSizzlingVisible, setIsSizzlingVisible] = useState(false);
 
     return (
-        <div className='w-full  mt-20 space-y-5'>
+        <div className='w-full mt-20  space-y-5'>
             <h1>{deliveryOption}</h1>
 
-            <div className="bg-blue-300 w-[500px] mx-auto cursor-pointer text-white font-bold" 
+            <div className="bg-blue-300 mx-10 cursor-pointer text-white font-bold" 
             onClick={()=>setIsPancitVisible(!isPancitVisible)}>Pancit</div>
 
-            <div className={`${isPancitVisible ? "max-h-[2000px]" : "max-h-0"} overflow-hidden duration-1000 grid grid-cols-2 gap-5 mx-5 px-[500px]
+            <div className={`${isPancitVisible ? "max-h-[2000px]" : "max-h-0"} overflow-hidden duration-1000 grid grid-cols-2 gap-5 mx-5 
             transition-all`}>
 
                 {MenuDetails.map((menu, index) => (
@@ -27,7 +27,7 @@ export const OrderSelection = ({ deliveryOption }) => {
                             <button className='h-6 w-6 rounded-full border border-gray-500'>+</button>
                         </div>
                         <div className='mt-2 mx-5'>
-                            <p className='text-[13px]'>{menu.description}</p>
+                            <p className='text-[13px] '>{menu.description}</p>
                         </div>
                         <div className='mt-2'>
                             <button className='text-sm bg-blue-500 text-white py-1 px-2 rounded-md'>Add to Cart</button>
@@ -36,8 +36,7 @@ export const OrderSelection = ({ deliveryOption }) => {
                 ))}
             </div>
             
-            <div className="bg-blue-300 w-[500px] mx-auto cursor-pointer text-white font-bold" 
-            onClick={()=>setIsSizzlingVisible(!isSizzlingVisible)}>Sizzler Solo</div>
+
 
         </div>
     );
