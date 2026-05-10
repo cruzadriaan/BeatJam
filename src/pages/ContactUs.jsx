@@ -20,9 +20,9 @@ export const ContactUs = () => {
         </div>
 
         <form action="" className='flex flex-col gap-5 items-center justify-center mt-10 px-15'>
-          <input type="text" placeholder='First Name' className='' />
-          <input type="email" placeholder='Email' />
-          <textarea name="" id="" placeholder='Message' className='h-[200px] border resize-none'></textarea>
+          <input type="text" placeholder='First Name' className='text-black' />
+          <input type="email" placeholder='Email' className='text-black'/>
+          <textarea name="" id="" placeholder='Message' className='h-[200px] border resize-none text-black'></textarea>
           <div className='flex gap-5 text-white'>
             <button className='w-[80px] py-1 shadow-gray-900 bg-yellow-500 hover:opacity-80'>Submit</button>
             <button className='w-[80px] py-1 border shadow-gray-900 bg-red-600 hover:opacity-80'>Clear</button>
