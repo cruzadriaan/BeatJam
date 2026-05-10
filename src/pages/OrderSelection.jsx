@@ -136,24 +136,62 @@ export const OrderSelection = ({ deliveryOption }) => {
                 <FontAwesomeIcon className={`${isFChickenVisible ? "rotate-90" : "rotate-0"} bg-transparent ml-2 !text-white text-sm duration-200`} icon={faAngleRight} />
             </div>
 
-            <div className={`${isFChickenVisible ? "max-h-[2000px]" : "max-h-0"} overflow-hidden duration-1000 flex flex-col justify-center mx-5 
+            <div className={`${isFChickenVisible ? "max-h-[2000px]" : "max-h-0"} overflow-hidden duration-1000 flex flex-col justify-center gap-2 mx-5 
             transition-all`}>
 
-                <div className="flex flex-col justify-center items-center">
-                    <label className="" htmlFor="">
-                        <input type="radio" name="flavor" value="sweetChili" />
-                        <span>Sweet Chili </span>
-                    </label>
-                    <label htmlFor=""><input type="radio" name="flavor" value="honeyGlazed"/>Honey Glazed</label>
-                    <label htmlFor=""><input type="radio" name="flavor" value="spicyGarlicMayo"/>Spicy Garlic Mayo</label>
-                    <label htmlFor=""><input type="radio" name="flavor" value="arabKebab"/>Arabian's Kebab</label>
-                    <label htmlFor=""><input type="radio" name="flavor" value="fireballBuffalo"/>Fireball Buffalo</label>
+                <div className="flex flex-row gap-5 items-center justify-between">
+                    <label htmlFor="">Sweet Chili</label>
+                    <h1>₱105</h1>
+                    <input className="w-5" type="checkbox" />
+                    <div className="flex gap-4">
+                        <button className='h-6 w-6 rounded-full border border-gray-500'>-</button>
+                        <h1>1</h1>
+                        <button className='h-6 w-6 rounded-full border border-gray-500'>+</button>
+                    </div>
                 </div>
-                
-                <div className='flex items-center justify-center gap-3 mt-2'>
-                    <button className='h-6 w-6 rounded-full border border-gray-500'>-</button>
-                    <h1>1</h1>
-                    <button className='h-6 w-6 rounded-full border border-gray-500'>+</button>
+
+                <div className="flex flex-row gap-5 items-center justify-between">
+                    <label htmlFor="">Honey Glazed</label>
+                    <h1>₱105</h1>
+                    <input className="w-5" type="checkbox" />
+                    <div className="flex gap-4">
+                        <button className='h-6 w-6 rounded-full border border-gray-500'>-</button>
+                        <h1>1</h1>
+                        <button className='h-6 w-6 rounded-full border border-gray-500'>+</button>
+                    </div>
+                </div>
+
+                <div className="flex flex-row gap-5 items-center justify-between">
+                    <label htmlFor="">Arabian's Kebab</label>
+                    <h1>₱105</h1>
+                    <input className="w-5" type="checkbox" />
+                    <div className="flex gap-4">
+                        <button className='h-6 w-6 rounded-full border border-gray-500'>-</button>
+                        <h1>1</h1>
+                        <button className='h-6 w-6 rounded-full border border-gray-500'>+</button>
+                    </div>
+                </div>
+
+                <div className="flex flex-row gap-5 items-center justify-between">
+                    <label htmlFor="">Spicy Garlic Mayo</label>
+                    <h1>₱105</h1>
+                    <input className="w-5" type="checkbox" />
+                    <div className="flex gap-4">
+                        <button className='h-6 w-6 rounded-full border border-gray-500'>-</button>
+                        <h1>1</h1>
+                        <button className='h-6 w-6 rounded-full border border-gray-500'>+</button>
+                    </div>
+                </div>
+
+                <div className="flex flex-row gap-5 items-center justify-between">
+                    <label htmlFor="">Fireball Buffalo</label>
+                    <h1>₱120</h1>
+                    <input className="w-5" type="checkbox" />
+                    <div className="flex gap-4">
+                        <button className='h-6 w-6 rounded-full border border-gray-500'>-</button>
+                        <h1>1</h1>
+                        <button className='h-6 w-6 rounded-full border border-gray-500'>+</button>
+                    </div>
                 </div>
 
                 <div className='mt-2'>
