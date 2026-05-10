@@ -14,6 +14,7 @@ export const OrderSelection = ({ deliveryOption }) => {
         <div className='w-full mt-20  space-y-5'>
             <h1>{deliveryOption}</h1>
 
+            <h1 className="text-left ml-10">Step 1: Select your order</h1>
             <div className="flex justify-center items-center bg-blue-300 mx-10 cursor-pointer"
                 onClick={() => setIsPancitVisible(!isPancitVisible)}>
                     <h1 className="!text-white font-bold">Pancit</h1>
@@ -113,7 +114,10 @@ export const OrderSelection = ({ deliveryOption }) => {
                 ))}
             </div>
 
-
+            <div className="flex justify-center gap-5">
+                <button className="bg-gray-400 px-3 py-1 cursor-pointer hover:opacity-85">Back</button>
+                <button className="bg-green-500 px-3 py-1 cursor-pointer hover:opacity-85">Next</button>
+            </div>
         </div>
     );
 }

@@ -10,12 +10,12 @@ export const DeliveryOptions = ({setDeliveryOption}) => {
     const navigate = useNavigate();
 
     const handleOrderPickUp = () => {
-        setDeliveryOption("Delivery Options: Pick up");
+        setDeliveryOption("Delivery Option: Pick up");
         navigate('/orderSelection');
     }
 
         const handleOrderDelivery = () => {
-        setDeliveryOption("Delivery Options: Delivery");
+        setDeliveryOption("Delivery Option: Delivery");
         navigate('/orderSelection');
     }
 
