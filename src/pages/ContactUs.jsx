@@ -1,7 +1,26 @@
 import '../styles/ContactUs.css';
+import {useState} from 'react';
 // import contactus from '../images/contacts.jpg'
 
 export const ContactUs = () => {
+
+  const [formData, setFormData] = useState(
+    {
+      fullName: "",
+      email: "",
+      message: "",
+    }
+  );
+
+  const handleClear = (e) => {
+    e.preventDefault();
+    setFormData({
+      fullName: "",
+      email: "",
+      message: "",
+    })
+  }
+
   return (
     <div className=''>
     <div className='flex flex-col mt-20 4xl:mx-[900px] 3xl:mx-[700px] 2xl:mx-[500px] xl:mx-[300px] lg:mx-[200px] md:mx-20 mx-3 
@@ -20,12 +39,17 @@ export const ContactUs = () => {
         </div>
 
         <form action="" className='flex flex-col gap-5 items-center justify-center mt-10 px-15'>
-          <input type="text" placeholder='First Name' className='text-black' />
-          <input type="email" placeholder='Email' className='text-black'/>
-          <textarea name="" id="" placeholder='Message' className='h-[200px] border resize-none text-black'></textarea>
+          <input type="text" placeholder='Full Name' className='text-black' value={formData.fullName}
+          onChange={(e) => setFormData({...formData, fullName: e.target.value})} />
+          <input type="email" placeholder='Email' className='text-black' value={formData.email}
+          onChange={(e) => setFormData({...formData, email: e.target.value})}/>
+          <textarea name="" id="" placeholder='Message' className='h-[200px] border resize-none text-black'
+          value={formData.message}
+          onChange={(e) => setFormData({...formData, message: e.target.value})}></textarea>
           <div className='flex gap-5 text-white'>
             <button className='w-[80px] py-1 shadow-gray-900 bg-yellow-500 hover:opacity-80'>Submit</button>
-            <button className='w-[80px] py-1 border shadow-gray-900 bg-red-600 hover:opacity-80'>Clear</button>
+            <button className='w-[80px] py-1 border shadow-gray-900 bg-red-600 hover:opacity-80'
+            onClick={handleClear}>Clear</button>
           </div>
         </form>
 
