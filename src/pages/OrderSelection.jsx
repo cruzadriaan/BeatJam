@@ -1,4 +1,4 @@
-import { MenuDetails, SizzlingMenu, ComboMenuList, SilogMeals, PizzaMenu } from "./MenuDetails";
+import { MenuDetails, SizzlingMenu, ComboMenuList, SilogMeals, PizzaMenu, MagicPotion } from "./MenuDetails";
 import { useState } from 'react';
 import { useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -12,6 +12,9 @@ export const OrderSelection = ({ deliveryOption }) => {
     const [isFChickenVisible, setisFChickenVisible] = useState(false);
     const [isSilogVisible, setIsSilogVisible] = useState(false);
     const [isPizzaVisible, setIsPizzaVisible] = useState(false);
+    const [isFriesVisible, setisFriesVisible] = useState(false);
+    const [isBeveragesVisible, setisBeveragesVisible] = useState(false);
+    const [isMagicPotionVisible, setisMagicPotionVisible] = useState(false);
     const [selectedSize, setSelectedSize] = useState(80);
 
     const navigate = useNavigate();
@@ -245,6 +248,155 @@ export const OrderSelection = ({ deliveryOption }) => {
             transition-all`}>
 
                 {PizzaMenu.map((menu, index) => (
+                    <div key={index} className='p-4 border border-gray-600 rounded-md'>
+                        <img src={menu.img} alt="" className='flex mx-auto w-[150px]' />
+
+                        <h1 className='text-md'>{menu.name}</h1>
+                        <h1>₱{menu.price}</h1>
+                        <div className='flex items-center justify-center gap-3 mt-2'>
+                            <button className='h-6 w-6 rounded-full border border-gray-500'>-</button>
+                            <h1>1</h1>
+                            <button className='h-6 w-6 rounded-full border border-gray-500'>+</button>
+                        </div>
+                        <div className='mt-2 mx-5'>
+                            <p className='text-[13px] '>{menu.description}</p>
+                        </div>
+                        <div className='mt-2'>
+                            <button className='text-sm bg-blue-500 text-white py-1 px-2 rounded-md'>Add to Cart</button>
+                        </div>
+                    </div>
+                ))}
+            </div>
+
+            {/* Fries */}
+            <div className="flex justify-center items-center bg-blue-300 mx-10 cursor-pointer"
+                onClick={() => setisFriesVisible(!isFriesVisible)}>
+                <h1 className="!text-white font-bold">Fries</h1>
+                <FontAwesomeIcon className={`${isFriesVisible ? "rotate-90" : "rotate-0"} bg-transparent ml-2 !text-white text-sm duration-200`} icon={faAngleRight} />
+            </div>
+
+            <div className={`${isFriesVisible ? "max-h-[2000px]" : "max-h-0"} overflow-hidden duration-1000 flex flex-col justify-center gap-2 mx-5 
+            transition-all`}>
+
+                <div className="flex flex-row gap-5 items-center justify-between">
+                    <label htmlFor="">Masala BBQ</label>
+                    <h1>₱105</h1>
+                    <input className="w-5" type="checkbox" />
+                    <div className="flex gap-4">
+                        <button className='h-6 w-6 rounded-full border border-gray-500'>-</button>
+                        <h1>1</h1>
+                        <button className='h-6 w-6 rounded-full border border-gray-500'>+</button>
+                    </div>
+                </div>
+
+                <div className="flex flex-row gap-5 items-center justify-between">
+                    <label htmlFor="">Salty Cheese</label>
+                    <h1>₱105</h1>
+                    <input className="w-5" type="checkbox" />
+                    <div className="flex gap-4">
+                        <button className='h-6 w-6 rounded-full border border-gray-500'>-</button>
+                        <h1>1</h1>
+                        <button className='h-6 w-6 rounded-full border border-gray-500'>+</button>
+                    </div>
+                </div>
+
+                <div className="flex flex-row gap-5 items-center justify-between">
+                    <label htmlFor="">Corn Cheese</label>
+                    <h1>₱105</h1>
+                    <input className="w-5" type="checkbox" />
+                    <div className="flex gap-4">
+                        <button className='h-6 w-6 rounded-full border border-gray-500'>-</button>
+                        <h1>1</h1>
+                        <button className='h-6 w-6 rounded-full border border-gray-500'>+</button>
+                    </div>
+                </div>
+
+                <div className="flex flex-row gap-5 items-center justify-between">
+                    <label htmlFor="">Salted Egg</label>
+                    <h1>₱105</h1>
+                    <input className="w-5" type="checkbox" />
+                    <div className="flex gap-4">
+                        <button className='h-6 w-6 rounded-full border border-gray-500'>-</button>
+                        <h1>1</h1>
+                        <button className='h-6 w-6 rounded-full border border-gray-500'>+</button>
+                    </div>
+                </div>
+
+                <div className='mt-2'>
+                    <button className='text-sm bg-blue-500 text-white py-1 px-2 rounded-md'>Add to Cart</button>
+                </div>
+            </div>
+
+            {/* Beverages */}
+            <div className="flex justify-center items-center bg-blue-300 mx-10 cursor-pointer"
+                onClick={() => setisBeveragesVisible(!isBeveragesVisible)}>
+                <h1 className="!text-white font-bold">Beverages</h1>
+                <FontAwesomeIcon className={`${isBeveragesVisible ? "rotate-90" : "rotate-0"} bg-transparent ml-2 !text-white text-sm duration-200`} icon={faAngleRight} />
+            </div>
+
+            <div className={`${isBeveragesVisible ? "max-h-[2000px]" : "max-h-0"} overflow-hidden duration-1000 flex flex-col justify-center gap-2 mx-5 
+            transition-all`}>
+
+                <div className="flex flex-row gap-5 items-center justify-between">
+                    <label htmlFor="">Calamansi Lemonade</label>
+                    <h1>₱105</h1>
+                    <input className="w-5" type="checkbox" />
+                    <div className="flex gap-4">
+                        <button className='h-6 w-6 rounded-full border border-gray-500'>-</button>
+                        <h1>1</h1>
+                        <button className='h-6 w-6 rounded-full border border-gray-500'>+</button>
+                    </div>
+                </div>
+
+                <div className="flex flex-row gap-5 items-center justify-between">
+                    <label htmlFor="">Cucumber Lemonade</label>
+                    <h1>₱105</h1>
+                    <input className="w-5" type="checkbox" />
+                    <div className="flex gap-4">
+                        <button className='h-6 w-6 rounded-full border border-gray-500'>-</button>
+                        <h1>1</h1>
+                        <button className='h-6 w-6 rounded-full border border-gray-500'>+</button>
+                    </div>
+                </div>
+
+                <div className="flex flex-row gap-5 items-center justify-between">
+                    <label htmlFor="">Yakult Lemonade</label>
+                    <h1>₱105</h1>
+                    <input className="w-5" type="checkbox" />
+                    <div className="flex gap-4">
+                        <button className='h-6 w-6 rounded-full border border-gray-500'>-</button>
+                        <h1>1</h1>
+                        <button className='h-6 w-6 rounded-full border border-gray-500'>+</button>
+                    </div>
+                </div>
+
+                <div className="flex flex-row gap-5 items-center justify-between">
+                    <label htmlFor="">Lemon Iced Tea Pitcher</label>
+                    <h1>₱105</h1>
+                    <input className="w-5" type="checkbox" />
+                    <div className="flex gap-4">
+                        <button className='h-6 w-6 rounded-full border border-gray-500'>-</button>
+                        <h1>1</h1>
+                        <button className='h-6 w-6 rounded-full border border-gray-500'>+</button>
+                    </div>
+                </div>
+
+                <div className='mt-2'>
+                    <button className='text-sm bg-blue-500 text-white py-1 px-2 rounded-md'>Add to Cart</button>
+                </div>
+            </div>
+
+            {/* Magic Potion Drink */}
+            <div className="flex justify-center items-center bg-blue-300 mx-10 cursor-pointer"
+                onClick={() => setisMagicPotionVisible(!isMagicPotionVisible)}>
+                <h1 className="!text-white font-bold">Magic Potion Drink</h1>
+                <FontAwesomeIcon className={`${isMagicPotionVisible ? "rotate-90" : "rotate-0"} bg-transparent ml-2 !text-white text-sm duration-200`} icon={faAngleRight} />
+            </div>
+
+            <div className={`${isMagicPotionVisible ? "max-h-[2000px]" : "max-h-0"} overflow-hidden duration-1000 grid grid-cols-2 gap-5 mx-5 
+            transition-all`}>
+
+                {MagicPotion.map((menu, index) => (
                     <div key={index} className='p-4 border border-gray-600 rounded-md'>
                         <img src={menu.img} alt="" className='flex mx-auto w-[150px]' />
 

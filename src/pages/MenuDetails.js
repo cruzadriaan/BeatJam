@@ -34,6 +34,8 @@ import Pepperoni from '../images/menu/menu-item/Pepperoni.png';
 import BeefMushroom from '../images/menu/menu-item/BeefMushroom.png';
 import PizzaSupreme from '../images/menu/menu-item/PizzaSupreme.png';
 import PizzaRoyale from '../images/menu/menu-item/PizzaRoyale.png';
+import GreenApple from '../images/menu/menu-item/GreenApple.png';
+
 
 export const MenuDetails = [
   {
@@ -301,4 +303,37 @@ export const PizzaMenu = [
     price: 145,
     description: "flavors"
   }
+]
+
+export const MagicPotion = [
+  {
+    img: GreenApple,
+    name: "Green Apple",
+    quantity: 1,
+    price: 145,
+  },
+  {
+    img: GreenApple,
+    name: "Blue Berry",
+    quantity: 1,
+    price: 145,
+  },
+  {
+    img: GreenApple,
+    name: "Strawberry",
+    quantity: 1,
+    price: 145,
+  },
+  {
+    img: GreenApple,
+    name: "Lychee",
+    quantity: 1,
+    price: 145,
+  },
+  {
+    img: GreenApple,
+    name: "Mango",
+    quantity: 1,
+    price: 145,
+  },
 ]
