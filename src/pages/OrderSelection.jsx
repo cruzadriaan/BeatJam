@@ -23,6 +23,10 @@ export const OrderSelection = ({ deliveryOption }) => {
         navigate("../deliveryOptions")
     }
 
+    const handleNext = () => {
+        navigate("/orderSummary")
+    }
+
     return (
 
         <div className='w-full mt-20  space-y-5'>
@@ -33,7 +37,7 @@ export const OrderSelection = ({ deliveryOption }) => {
             {/* Menu items */}
 
             {/* Pancit */}
-            <div className="flex justify-center items-center bg-blue-300 mx-10 cursor-pointer"
+            <div className="flex justify-center items-center bg-yellow-500 mx-10 cursor-pointer"
                 onClick={() => setIsPancitVisible(!isPancitVisible)}>
                 <h1 className="!text-white font-bold">Pancit</h1>
                 <FontAwesomeIcon className={`${isPancitVisible ? "rotate-90" : "rotate-0"} bg-transparent ml-2 !text-white text-sm duration-200`} icon={faAngleRight} />
@@ -75,7 +79,7 @@ export const OrderSelection = ({ deliveryOption }) => {
             </div>
 
             {/* Sizzler Solo */}
-            <div className="flex justify-center items-center bg-blue-300 mx-10 cursor-pointer"
+            <div className="flex justify-center items-center bg-yellow-500 mx-10 cursor-pointer"
                 onClick={() => setIsSizzlingSoloVisible(!isSizzlingSoloVisible)}>
                 <h1 className="!text-white font-bold">Sizzler Solo</h1>
                 <FontAwesomeIcon className={`${isSizzlingSoloVisible ? "rotate-90" : "rotate-0"} bg-transparent ml-2 !text-white text-sm duration-200`} icon={faAngleRight} />
@@ -106,7 +110,7 @@ export const OrderSelection = ({ deliveryOption }) => {
             </div>
 
             {/* Sizzler Combo Meals */}
-            <div className="flex justify-center items-center bg-blue-300 mx-10 cursor-pointer"
+            <div className="flex justify-center items-center bg-yellow-500 mx-10 cursor-pointer"
                 onClick={() => setIsSizzlerComboVisible(!isSizzlerComboVisible)}>
                 <h1 className="!text-white font-bold">Sizzler Combo Meals</h1>
                 <FontAwesomeIcon className={`${isSizzlerComboVisible ? "rotate-90" : "rotate-0"} bg-transparent ml-2 !text-white text-sm duration-200`} icon={faAngleRight} />
@@ -137,7 +141,7 @@ export const OrderSelection = ({ deliveryOption }) => {
             </div>
 
             {/* Flavored Chicken */}
-            <div className="flex justify-center items-center bg-blue-300 mx-10 cursor-pointer"
+            <div className="flex justify-center items-center bg-yellow-500 mx-10 cursor-pointer"
                 onClick={() => setisFChickenVisible(!isFChickenVisible)}>
                 <h1 className="!text-white font-bold">Flavored Chicken</h1>
                 <FontAwesomeIcon className={`${isFChickenVisible ? "rotate-90" : "rotate-0"} bg-transparent ml-2 !text-white text-sm duration-200`} icon={faAngleRight} />
@@ -207,7 +211,7 @@ export const OrderSelection = ({ deliveryOption }) => {
             </div>
 
             {/* Silog Meals */}
-            <div className="flex justify-center items-center bg-blue-300 mx-10 cursor-pointer"
+            <div className="flex justify-center items-center bg-yellow-500 mx-10 cursor-pointer"
                 onClick={() => setIsSilogVisible(!isSilogVisible)}>
                 <h1 className="!text-white font-bold">Silog Meals</h1>
                 <FontAwesomeIcon className={`${isSilogVisible ? "rotate-90" : "rotate-0"} bg-transparent ml-2 !text-white text-sm duration-200`} icon={faAngleRight} />
@@ -238,7 +242,7 @@ export const OrderSelection = ({ deliveryOption }) => {
             </div>
 
             {/* Pizza Menu */}
-            <div className="flex justify-center items-center bg-blue-300 mx-10 cursor-pointer"
+            <div className="flex justify-center items-center bg-yellow-500 mx-10 cursor-pointer"
                 onClick={() => setIsPizzaVisible(!isPizzaVisible)}>
                 <h1 className="!text-white font-bold">Pizza</h1>
                 <FontAwesomeIcon className={`${isPizzaVisible ? "rotate-90" : "rotate-0"} bg-transparent ml-2 !text-white text-sm duration-200`} icon={faAngleRight} />
@@ -269,7 +273,7 @@ export const OrderSelection = ({ deliveryOption }) => {
             </div>
 
             {/* Fries */}
-            <div className="flex justify-center items-center bg-blue-300 mx-10 cursor-pointer"
+            <div className="flex justify-center items-center bg-yellow-500 mx-10 cursor-pointer"
                 onClick={() => setisFriesVisible(!isFriesVisible)}>
                 <h1 className="!text-white font-bold">Fries</h1>
                 <FontAwesomeIcon className={`${isFriesVisible ? "rotate-90" : "rotate-0"} bg-transparent ml-2 !text-white text-sm duration-200`} icon={faAngleRight} />
@@ -328,7 +332,7 @@ export const OrderSelection = ({ deliveryOption }) => {
             </div>
 
             {/* Beverages */}
-            <div className="flex justify-center items-center bg-blue-300 mx-10 cursor-pointer"
+            <div className="flex justify-center items-center bg-yellow-500 mx-10 cursor-pointer"
                 onClick={() => setisBeveragesVisible(!isBeveragesVisible)}>
                 <h1 className="!text-white font-bold">Beverages</h1>
                 <FontAwesomeIcon className={`${isBeveragesVisible ? "rotate-90" : "rotate-0"} bg-transparent ml-2 !text-white text-sm duration-200`} icon={faAngleRight} />
@@ -387,7 +391,7 @@ export const OrderSelection = ({ deliveryOption }) => {
             </div>
 
             {/* Magic Potion Drink */}
-            <div className="flex justify-center items-center bg-blue-300 mx-10 cursor-pointer"
+            <div className="flex justify-center items-center bg-yellow-500 mx-10 cursor-pointer"
                 onClick={() => setisMagicPotionVisible(!isMagicPotionVisible)}>
                 <h1 className="!text-white font-bold">Magic Potion Drink</h1>
                 <FontAwesomeIcon className={`${isMagicPotionVisible ? "rotate-90" : "rotate-0"} bg-transparent ml-2 !text-white text-sm duration-200`} icon={faAngleRight} />
@@ -418,11 +422,12 @@ export const OrderSelection = ({ deliveryOption }) => {
             </div>
 
 
-            {/* Buttom buttons */}
+            {/* Bottom buttons */}
             <div className="flex justify-center gap-5 py-10">
-                <button className="bg-gray-400 px-3 py-1 cursor-pointer hover:opacity-85"
+                <button className="bg-gray-300 px-3 py-1 cursor-pointer hover:opacity-85"
                     onClick={handleBack}>Back</button>
-                <button className="bg-green-500 px-3 py-1 cursor-pointer hover:opacity-85">Next</button>
+                <button className="bg-gray-300 px-3 py-1 cursor-pointer hover:opacity-85"
+                onClick={handleNext}>Next</button>
             </div>
         </div>
     );

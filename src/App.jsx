@@ -9,6 +9,7 @@ import { OrderDelivery } from './pages/OrderDelivery';
 import { OrderPickUp } from './pages/OrderPickUp';
 import { DeliveryOptions } from './pages/DeliveryOptions';
 import { OrderSelection } from './pages/OrderSelection';
+import { OrderSummary } from './pages/OrderSummary';
 import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import { ScrollToTopArrow } from './pages/ScrollToTopArrow';
 import { useState } from 'react';
@@ -30,6 +31,7 @@ function App() {
           <Route path="/orderPickUp" element={<OrderPickUp />} />
           <Route path="/deliveryOptions" element={<DeliveryOptions setDeliveryOption={setDeliveryOption} />} />
           <Route path="/orderSelection" element={<OrderSelection deliveryOption={deliveryOption} />} />
+          <Route path="/orderSummary" element={<OrderSummary />} />
         </Routes>
         <ScrollToTopArrow />
         
