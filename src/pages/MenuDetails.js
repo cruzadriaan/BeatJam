@@ -27,6 +27,13 @@ import BangSilog from '../images/menu/menu-item/bangSilog.png';
 import PorkSilog from '../images/menu/menu-item/porkSilog.png';
 import SpamSilog from '../images/menu/menu-item/spamSilog.png';
 import ChicSilog from '../images/menu/menu-item/ChicSilog.png';
+import PizzaCheese from '../images/menu/menu-item/PizzaCheese.png';
+import HamCheese from '../images/menu/menu-item/HamCheese.png';
+import Hawaiian from '../images/menu/menu-item/Hawaiian.png';
+import Pepperoni from '../images/menu/menu-item/Pepperoni.png';
+import BeefMushroom from '../images/menu/menu-item/BeefMushroom.png';
+import PizzaSupreme from '../images/menu/menu-item/PizzaSupreme.png';
+import PizzaRoyale from '../images/menu/menu-item/PizzaRoyale.png';
 
 export const MenuDetails = [
   {
@@ -175,71 +182,123 @@ export const SilogMeals = [
     img: HotSilog,
     name: "Hotsilog",
     quantity: 1,
-    price: 180,
+    price: 80,
     description: "Hotdog with egg"
   },
   {
     img: Tocilog,
     name: "Tocilog",
     quantity: 1,
-    price: 180,
+    price: 80,
     description: "Tocino with egg"
   },
   {
     img: BacSilog,
     name: "Bacsilog",
     quantity: 1,
-    price: 180,
+    price: 80,
     description: "Bacon with egg"
   },
   {
     img: Sausilog,
     name: "Sausilog",
     quantity: 1,
-    price: 180,
+    price: 80,
     description: "Sausage with egg"
   },
   {
     img: Tapsilog,
     name: "Tapsilog",
     quantity: 1,
-    price: 180,
+    price: 90,
     description: "Tapa with egg"
   },
   {
     img: CornSilog,
     name: "Cornsilog",
     quantity: 1,
-    price: 180,
+    price: 90,
     description: "Corned beef with egg"
   },
   {
     img: BangSilog,
     name: "Bangsilog",
     quantity: 1,
-    price: 180,
+    price: 95,
     description: "Bangus with egg"
   },
   {
     img: PorkSilog,
     name: "Porksilog",
     quantity: 1,
-    price: 180,
+    price: 99,
     description: "Pork with egg"
   },
   {
     img: SpamSilog,
     name: "Spamsilog",
     quantity: 1,
-    price: 180,
+    price: 99,
     description: "Spam with egg"
   },
   {
     img: ChicSilog,
     name: "Chicsilog",
     quantity: 1,
-    price: 180,
+    price: 99,
     description: "Chicken with egg"
   },
 
+]
+
+export const PizzaMenu = [
+  {
+    img: PizzaCheese,
+    name: "Pizza Cheese",
+    quantity: 1,
+    price: 105,
+    description: "flavors"
+  },
+  {
+    img: HamCheese,
+    name: "Ham Cheese",
+    quantity: 1,
+    price: 110,
+    description: "flavors"
+  },
+  {
+    img: Hawaiian,
+    name: "Hawaiian",
+    quantity: 1,
+    price: 120,
+    description: "flavors"
+  },
+  {
+    img: Pepperoni,
+    name: "Pepperoni",
+    quantity: 1,
+    price: 120,
+    description: "flavors"
+  },
+  {
+    img: BeefMushroom,
+    name: "Beef Mushroom",
+    quantity: 1,
+    price: 135,
+    description: "flavors"
+  },
+  {
+    img: PizzaSupreme,
+    name: "Pizza Supreme",
+    quantity: 1,
+    price: 145,
+    description: "flavors"
+  },
+  {
+    img: PizzaRoyale,
+    name: "Pizza Royale",
+    quantity: 1,
+    price: 145,
+    description: "flavors"
+  }
 ]
