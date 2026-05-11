@@ -280,7 +280,7 @@ export const OrderSelection = ({ deliveryOption }) => {
 
                 <div className="flex flex-row gap-5 items-center justify-between">
                     <label htmlFor="">Masala BBQ</label>
-                    <h1>₱105</h1>
+                    <h1>₱65</h1>
                     <input className="w-5" type="checkbox" />
                     <div className="flex gap-4">
                         <button className='h-6 w-6 rounded-full border border-gray-500'>-</button>
@@ -291,7 +291,7 @@ export const OrderSelection = ({ deliveryOption }) => {
 
                 <div className="flex flex-row gap-5 items-center justify-between">
                     <label htmlFor="">Salty Cheese</label>
-                    <h1>₱105</h1>
+                    <h1>₱65</h1>
                     <input className="w-5" type="checkbox" />
                     <div className="flex gap-4">
                         <button className='h-6 w-6 rounded-full border border-gray-500'>-</button>
@@ -302,7 +302,7 @@ export const OrderSelection = ({ deliveryOption }) => {
 
                 <div className="flex flex-row gap-5 items-center justify-between">
                     <label htmlFor="">Corn Cheese</label>
-                    <h1>₱105</h1>
+                    <h1>₱65</h1>
                     <input className="w-5" type="checkbox" />
                     <div className="flex gap-4">
                         <button className='h-6 w-6 rounded-full border border-gray-500'>-</button>
@@ -313,7 +313,7 @@ export const OrderSelection = ({ deliveryOption }) => {
 
                 <div className="flex flex-row gap-5 items-center justify-between">
                     <label htmlFor="">Salted Egg</label>
-                    <h1>₱105</h1>
+                    <h1>₱65</h1>
                     <input className="w-5" type="checkbox" />
                     <div className="flex gap-4">
                         <button className='h-6 w-6 rounded-full border border-gray-500'>-</button>
@@ -339,7 +339,7 @@ export const OrderSelection = ({ deliveryOption }) => {
 
                 <div className="flex flex-row gap-5 items-center justify-between">
                     <label htmlFor="">Calamansi Lemonade</label>
-                    <h1>₱105</h1>
+                    <h1>45</h1>
                     <input className="w-5" type="checkbox" />
                     <div className="flex gap-4">
                         <button className='h-6 w-6 rounded-full border border-gray-500'>-</button>
@@ -350,7 +350,7 @@ export const OrderSelection = ({ deliveryOption }) => {
 
                 <div className="flex flex-row gap-5 items-center justify-between">
                     <label htmlFor="">Cucumber Lemonade</label>
-                    <h1>₱105</h1>
+                    <h1>45</h1>
                     <input className="w-5" type="checkbox" />
                     <div className="flex gap-4">
                         <button className='h-6 w-6 rounded-full border border-gray-500'>-</button>
@@ -361,7 +361,7 @@ export const OrderSelection = ({ deliveryOption }) => {
 
                 <div className="flex flex-row gap-5 items-center justify-between">
                     <label htmlFor="">Yakult Lemonade</label>
-                    <h1>₱105</h1>
+                    <h1>50</h1>
                     <input className="w-5" type="checkbox" />
                     <div className="flex gap-4">
                         <button className='h-6 w-6 rounded-full border border-gray-500'>-</button>
@@ -372,7 +372,7 @@ export const OrderSelection = ({ deliveryOption }) => {
 
                 <div className="flex flex-row gap-5 items-center justify-between">
                     <label htmlFor="">Lemon Iced Tea Pitcher</label>
-                    <h1>₱105</h1>
+                    <h1>80</h1>
                     <input className="w-5" type="checkbox" />
                     <div className="flex gap-4">
                         <button className='h-6 w-6 rounded-full border border-gray-500'>-</button>
