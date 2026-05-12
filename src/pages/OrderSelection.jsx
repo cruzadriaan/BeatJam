@@ -37,9 +37,10 @@ export const OrderSelection = ({ deliveryOption }) => {
             {/* Menu items */}
             <div className="flex flex-col gap-1">
                 {/* Pancit */}
-                <div className="flex justify-center items-center bg-yellow-500 mx-10 cursor-pointer rounded-lg"
+                <div className="flex justify-center items-center bg-white/10 backdrop-blur-md shadow-lg border border-white/20 mx-10 cursor-pointer rounded-lg
+                hover:-translate-y-1 transition-all"
                     onClick={() => setIsPancitVisible(!isPancitVisible)}>
-                    <h1 className="!text-white font-bold">Pancit</h1>
+                    <h1 className="!text-yellow-500 font-bold">Pancit</h1>
                     <FontAwesomeIcon className={`${isPancitVisible ? "rotate-90" : "rotate-0"} bg-transparent ml-2 !text-white text-sm duration-200`} icon={faAngleRight} />
                 </div>
 

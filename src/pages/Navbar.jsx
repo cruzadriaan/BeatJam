@@ -7,14 +7,13 @@ import { Navlinks } from './Navlink.js';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebook } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
-
-
-
+import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
 
 
 export const Navbar = () => {
 
     const [isOpen, setIsOpen] = useState(false);
+    const [isCartVisible, setisCartVisible] = useState(false);
 
     return (
 
@@ -27,7 +26,14 @@ export const Navbar = () => {
             </div>
 
             <div>
-                <div>
+
+                <div className='flex flex-row gap-10'>
+                    
+                        <button className="bg-blue-500 rounded bg-transparent sm:fixed sm:bottom-5 sm:right-10 sm:bg-yellow-500 sm:p-2 sm:rounded-full">
+                            <FontAwesomeIcon className='bg-transparent pb-1 sm:p-1' icon={faShoppingCart} />
+                        </button>
+                    
+
 
                     <button className="sm:hidden flex flex-col gap-1" onClick={() => setIsOpen(!isOpen)}>
                         {!isOpen &&
@@ -77,7 +83,7 @@ export const Navbar = () => {
                             <p>Follow us on social media:</p>
                             <div className='flex justify-center items-center gap-5'>
                                 <a href='https://www.facebook.com/profile.php?id=61581443513987' target="_blank">
-                                    <FontAwesomeIcon className='h-5 text-gray-900 hover:scale-110'  icon={faFacebook} />
+                                    <FontAwesomeIcon className='h-5 text-gray-900 hover:scale-110' icon={faFacebook} />
                                 </a>
                                 <a href="mailto:beatjamrestobar@gmail.com" target="_blank" >
                                     <FontAwesomeIcon className='h-5 text-gray-900 hover:scale-110' icon={faEnvelope} />
