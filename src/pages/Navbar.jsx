@@ -1,8 +1,8 @@
 import { Home } from './Home';
 import '../styles/Navbar.css';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import BeatJamLogo from '../images/beatjam-logo.png';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Navlinks } from './Navlink.js';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebook } from '@fortawesome/free-brands-svg-icons';
@@ -13,7 +13,11 @@ import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
 export const Navbar = () => {
 
     const [isOpen, setIsOpen] = useState(false);
-    const [isCartVisible, setisCartVisible] = useState(false);
+
+    const location = useLocation();
+
+    const showCartPaths = [ "/orderSelection", "/orderSummary"];
+    const isCartVisible = showCartPaths.includes(location.pathname);
 
     return (
 
@@ -27,12 +31,12 @@ export const Navbar = () => {
 
             <div>
 
-                <div className='flex flex-row gap-10'>
-                    
+                <div className='flex flex-row gap-10 justify-center items-center'>
+                    {isCartVisible &&
                         <button className="bg-blue-500 rounded bg-transparent sm:fixed sm:bottom-5 sm:right-10 sm:bg-yellow-500 sm:p-2 sm:rounded-full">
-                            <FontAwesomeIcon className='bg-transparent pb-1 sm:p-1' icon={faShoppingCart} />
+                            <FontAwesomeIcon className='bg-transparent pt-1 sm:p-1' icon={faShoppingCart} />
                         </button>
-                    
+                    }
 
 
                     <button className="sm:hidden flex flex-col gap-1" onClick={() => setIsOpen(!isOpen)}>
