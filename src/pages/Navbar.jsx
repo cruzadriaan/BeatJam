@@ -1,8 +1,8 @@
 import { Home } from './Home';
 import '../styles/Navbar.css';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import BeatJamLogo from '../images/beatjam-logo.png';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { Navlinks } from './Navlink.js';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebook } from '@fortawesome/free-brands-svg-icons';
@@ -10,7 +10,7 @@ import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
 
 
-export const Navbar = () => {
+export const Navbar = ({setIsCartOpen, isCartOpen}) => {
 
     const [isOpen, setIsOpen] = useState(false);
 
@@ -21,7 +21,7 @@ export const Navbar = () => {
 
     return (
 
-        <div className='fixed top-0 w-full  flex flex-row justify-between items-center  sm:pt-3 md:p-3 p-3 h-[70px] z-50'>
+        <div className='fixed top-0 w-full  flex flex-row justify-between items-center  sm:pt-3 md:p-3 p-3 h-[70px] z-30'>
 
 
             <div className="">
@@ -33,7 +33,10 @@ export const Navbar = () => {
 
                 <div className='flex flex-row gap-10 justify-center items-center'>
                     {isCartVisible &&
-                        <button className="bg-blue-500 rounded bg-transparent sm:fixed sm:bottom-5 sm:right-10 sm:bg-yellow-500 sm:p-2 sm:rounded-full">
+                        <button className="bg-blue-500 rounded bg-transparent sm:fixed sm:bottom-5 sm:right-10 sm:bg-yellow-500 sm:p-2 sm:rounded-full"
+                        onClick={() => 
+                            {setIsCartOpen(!isCartOpen);
+                        }}>
                             <FontAwesomeIcon className='bg-transparent pt-1 sm:p-1' icon={faShoppingCart} />
                         </button>
                     }
@@ -78,9 +81,6 @@ export const Navbar = () => {
                             </div>
                         ))}
                     </div>
-
-
-
 
                     {isOpen &&
                         <div className="flex flex-col text-[12px] gap-4 mt-auto justify-center mb-10" >

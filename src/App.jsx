@@ -10,6 +10,7 @@ import { OrderPickUp } from './pages/OrderPickUp';
 import { DeliveryOptions } from './pages/DeliveryOptions';
 import { OrderSelection } from './pages/OrderSelection';
 import { OrderSummary } from './pages/OrderSummary';
+import { Cart } from './pages/Cart';
 import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import { ScrollToTopArrow } from './pages/ScrollToTopArrow';
 import { useState } from 'react';
@@ -17,11 +18,12 @@ import { useState } from 'react';
 function App() {
 
   const [deliveryOption, setDeliveryOption] = useState("");
+  const [isCartOpen, setIsCartOpen] = useState(false);
 
   return (
     <div className="app">
       <Router>
-        <Navbar />
+        <Navbar setIsCartOpen={setIsCartOpen} />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/menu" element={<Menu />} />
@@ -31,8 +33,9 @@ function App() {
           <Route path="/orderPickUp" element={<OrderPickUp />} />
           <Route path="/deliveryOptions" element={<DeliveryOptions setDeliveryOption={setDeliveryOption} />} />
           <Route path="/orderSelection" element={<OrderSelection deliveryOption={deliveryOption} />} />
-          <Route path="/orderSummary" element={<OrderSummary />} />
+          <Route path="/orderSummary" element={<OrderSummary  />} />
         </Routes>
+        <Cart setIsCartOpen={setIsCartOpen} isCartOpen={isCartOpen}/>
         <ScrollToTopArrow />
         
       </Router>
